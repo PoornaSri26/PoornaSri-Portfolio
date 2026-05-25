@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Poorna Sri Nandyala — CS @ IIIT Sri City</title>
+<meta name="description" content="Poorna Sri Nandyala — CS undergraduate at IIIT Sri City. AI researcher, web developer, networking enthusiast."/>
+<meta property="og:title" content="Poorna Sri Nandyala — Portfolio"/>
+<meta property="og:description" content="CS undergraduate at IIIT Sri City, researching EEG-based emotion analysis and building AI-powered systems."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://poornasri26.github.io/portfolio/"/>
+<meta property="og:image" content="https://poornasri26.github.io/portfolio/og-image.svg"/>
+<meta property="og:site_name" content="Poorna Sri Nandyala"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Poorna Sri Nandyala — Portfolio"/>
+<meta name="twitter:description" content="CS undergraduate at IIIT Sri City, researching EEG-based emotion analysis and building AI-powered systems."/>
+<meta name="twitter:image" content="https://poornasri26.github.io/portfolio/og-image.svg"/>
+<link rel="canonical" href="https://poornasri26.github.io/portfolio/"/>
+<meta name="theme-color" content="#0a0a0c"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%237c6ef0' width='32' height='32' rx='6'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-family='monospace' font-size='12' font-weight='bold'%3EPS%3C/text%3E%3C/svg%3E"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Poorna Sri Nandyala",
+  "jobTitle": "Computer Science Student",
+  "email": "poornasri.n24@gmail.com",
+  "url": "https://poornasri26.github.io/portfolio/",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Indian Institute of Information Technology Sri City"
+  },
+  "knowsAbout": ["Machine Learning", "EEG Signal Processing", "Brain-Computer Interface", "Computer Networks", "Web Development"],
+  "sameAs": [
+    "https://github.com/PoornaSri26",
+    "https://www.linkedin.com/in/poorna-sri-nandyala-06754b316"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/magic.css"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0c;--bg2:#111114;--bg3:#18181d;--surface:#1e1e25;--surface2:#252530;
+  --border:#2a2a38;--border2:#363645;--text:#e8e8f0;--text2:#9898b0;--text3:#5a5a70;
+  --accent:#7c6ef0;--accent2:#a594f5;--green:#22c55e;--teal:#2dd4bf;--amber:#f59e0b;
+  --sans:'Space Grotesk',sans-serif;--mono:'JetBrains Mono',monospace;--serif:'Fraunces',serif;
+  --radius:8px;--radius-lg:14px;--radius-xl:20px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+.skip-link{position:absolute;top:-100px;left:1rem;z-index:200;padding:.6rem 1rem;background:var(--accent);color:#fff;font-family:var(--mono);font-size:12px;border-radius:var(--radius);text-decoration:none;transition:top .2s}
+.skip-link:focus{top:1rem}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px);background:rgba(10,10,12,0.85);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 2rem;height:60px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo{font-family:var(--mono);font-size:13px;color:var(--accent2);letter-spacing:.05em;text-decoration:none}
+.nav-logo span{color:var(--text3)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:13px;color:var(--text2);text-decoration:none;font-family:var(--mono);letter-spacing:.04em;transition:color .2s}
+.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--text)}
+.nav-cta{font-size:12px;font-family:var(--mono);background:var(--accent);color:#fff;padding:6px 16px;border-radius:20px;text-decoration:none;transition:all .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--accent2)}
+.nav-toggle{display:none;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid var(--border2);border-radius:var(--radius);background:var(--surface);color:var(--text);cursor:pointer}
+.nav-toggle svg{width:18px;height:18px}
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 2rem 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(124,110,240,0.08) 0%,transparent 65%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-150px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(45,212,191,0.05) 0%,transparent 65%);pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto;width:100%}
+.hero-tag{font-family:var(--mono);font-size:11px;color:var(--green);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:8px}
+.hero-tag::before{content:'';display:block;width:24px;height:1px;background:var(--green)}
+.hero-name{font-family:var(--serif);font-size:clamp(3.5rem,9vw,7rem);font-weight:300;line-height:.95;letter-spacing:-.02em;margin-bottom:1rem;color:var(--text)}
+.hero-name em{font-style:italic;color:var(--accent2)}
+.hero-subtitle{font-size:clamp(1rem,2.5vw,1.25rem);color:var(--text2);max-width:600px;line-height:1.7;margin-bottom:2.5rem;font-weight:400}
+.hero-links{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:3rem}
+.hl{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;padding:9px 18px;border-radius:var(--radius);text-decoration:none;transition:all .2s;border:1px solid var(--border2)}
+.hl.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.hl.primary:hover{background:var(--accent2);border-color:var(--accent2)}
+.hl.ghost{color:var(--text2);background:transparent}
+.hl.ghost:hover{background:var(--surface);color:var(--text);border-color:var(--border2)}
+.hl.email{color:var(--teal);border-color:rgba(45,212,191,0.3)}
+.hl.email:hover{background:rgba(45,212,191,0.08)}
+.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column;gap:4px}
+.stat-num{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--text);line-height:1}
+.stat-label{font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:.08em}
+.grid-line{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0}
+.section{max-width:1100px;margin:0 auto;padding:56px 2rem}
+.section-header{display:flex;align-items:baseline;gap:1.5rem;margin-bottom:2rem}
+.section-num{font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:.1em}
+.section-title{font-size:clamp(1.5rem,3vw,2rem);font-weight:600;color:var(--text);letter-spacing:-.02em}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about-text p{color:var(--text2);line-height:1.6;font-size:15px;max-width:52ch}
+.about-lead{font-size:1.05rem;color:var(--text);margin-bottom:1.25rem}
+.about-chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:11px;padding:6px 12px;border-radius:20px;border:1px solid var(--border2);color:var(--text2)}
+.about-text strong{color:var(--text)}
+.about-meta{display:flex;flex-direction:column;gap:1rem}
+.meta-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;transition:border-color .2s}
+.meta-card:hover{border-color:var(--border2)}
+.meta-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem}
+.meta-label{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase}
+.meta-badge{font-family:var(--mono);font-size:10px;padding:3px 10px;border-radius:20px}
+.badge-green{background:rgba(34,197,94,.12);color:var(--green)}
+.badge-amber{background:rgba(245,158,11,.12);color:var(--amber)}
+.badge-accent{background:rgba(124,110,240,.12);color:var(--accent2)}
+.meta-val{font-size:15px;font-weight:500;color:var(--text);margin-bottom:2px}
+.meta-sub{font-size:13px;color:var(--text2)}
+.meta-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;color:var(--accent2);text-decoration:none;margin-top:.5rem;transition:opacity .2s}
+.meta-link:hover{opacity:.7}
+.meta-link svg{width:12px;height:12px}
+.research-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-xl);padding:1.5rem 1.75rem;position:relative;overflow:hidden;transition:border-color .2s}
+.research-card:hover{border-color:var(--border2)}
+.research-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--teal))}
+.research-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.research-type{font-family:var(--mono);font-size:11px;padding:5px 14px;border-radius:20px;background:rgba(124,110,240,.12);color:var(--accent2);letter-spacing:.06em}
+.research-title{font-size:1.5rem;font-weight:600;color:var(--text);margin-bottom:.5rem;letter-spacing:-.02em}
+.research-tags{display:flex;flex-wrap:wrap;gap:8px}
+.rtag{font-family:var(--mono);font-size:11px;padding:4px 12px;border-radius:4px;border:1px solid var(--border2);color:var(--text3)}
+.rtag.accent{border-color:rgba(124,110,240,.4);color:var(--accent2)}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.proj-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-xl);padding:1.25rem 1.5rem;position:relative;transition:all .25s;text-decoration:none;display:flex;flex-direction:column}
+.proj-card:hover{border-color:var(--accent);transform:translateY(-3px);background:var(--bg3)}
+.proj-card.featured{grid-column:span 2}
+.proj-desc{display:none}
+.proj-card.featured .proj-desc{display:block;font-size:13px;color:var(--text2);line-height:1.5;max-width:48ch}
+.proj-lang{display:inline-block;font-family:var(--mono);font-size:10px;padding:4px 12px;border-radius:20px;margin-bottom:1rem;border:1px solid}
+.lang-js{color:#f7df1e;border-color:rgba(247,223,30,.3);background:rgba(247,223,30,.07)}
+.lang-py{color:#3b82f6;border-color:rgba(59,130,246,.3);background:rgba(59,130,246,.07)}
+.lang-html{color:#f97316;border-color:rgba(249,115,22,.3);background:rgba(249,115,22,.07)}
+.lang-py2{color:#8b5cf6;border-color:rgba(139,92,246,.3);background:rgba(139,92,246,.07)}
+.lang-multi{color:var(--teal);border-color:rgba(45,212,191,.3);background:rgba(45,212,191,.07)}
+.lang-nb{color:var(--amber);border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.07)}
+.proj-name{font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:.5rem;letter-spacing:-.01em}
+.proj-desc{font-size:13.5px;color:var(--text2);line-height:1.7;flex:1;margin-bottom:1rem}
+.proj-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1rem}
+.ptag{font-family:var(--mono);font-size:10px;padding:3px 10px;border-radius:3px;background:var(--surface);color:var(--text3);border:1px solid var(--border)}
+.proj-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.proj-link{font-family:var(--mono);font-size:11px;color:var(--accent2);text-decoration:none;display:flex;align-items:center;gap:5px;transition:gap .2s}
+.proj-card:hover .proj-link{gap:8px}
+.proj-star{font-family:var(--mono);font-size:11px;color:var(--amber);display:flex;align-items:center;gap:4px}
+.proj-year{font-family:var(--mono);font-size:11px;color:var(--text3)}
+.view-all{display:flex;justify-content:center;margin-top:2rem}
+.view-all-btn{font-family:var(--mono);font-size:12px;color:var(--text2);border:1px solid var(--border2);padding:10px 24px;border-radius:var(--radius);text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.view-all-btn:hover{background:var(--surface);color:var(--text);border-color:var(--accent)}
+.skills-wrap{display:flex;flex-wrap:wrap;gap:8px}
+.skill-chip{font-family:var(--mono);font-size:11px;padding:8px 14px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);color:var(--text2);transition:border-color .2s}
+.skill-chip:hover{border-color:var(--border2);color:var(--text)}
+.skill-chip.accent{border-color:rgba(124,110,240,.35);color:var(--accent2)}
+.timeline{display:flex;flex-direction:column;gap:1px}
+.timeline-item{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem 1.75rem;transition:border-color .2s}
+.timeline-item+.timeline-item{margin-top:8px}
+.timeline-item:hover{border-color:var(--border2)}
+.tl-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:.5rem}
+.tl-title{font-size:15px;font-weight:600;color:var(--text)}
+.tl-sub{font-size:13px;color:var(--text2);margin-top:2px}
+.tl-right{text-align:right;flex-shrink:0}
+.tl-year{font-family:var(--mono);font-size:12px;color:var(--text3)}
+.tl-badge{font-family:var(--mono);font-size:11px;padding:4px 12px;border-radius:20px;margin-top:4px;display:inline-block}
+.contact-section{background:var(--bg2);border-top:1px solid var(--border)}
+.contact-inner{max-width:1100px;margin:0 auto;padding:56px 2rem;text-align:center}
+.contact-heading{font-family:var(--serif);font-size:clamp(2rem,5vw,4rem);font-weight:300;margin-bottom:1rem;letter-spacing:-.02em}
+.contact-heading em{font-style:italic;color:var(--accent2)}
+.contact-sub{font-size:15px;color:var(--text2);margin-bottom:2.5rem;line-height:1.7}
+.contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem 2rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-text{font-family:var(--mono);font-size:11px;color:var(--text3)}
+.footer-text span{color:var(--accent2)}
+.terminal{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;font-family:var(--mono);font-size:12px;line-height:1.9;margin-top:1.5rem;position:relative}
+.terminal::before{content:'● ● ●';position:absolute;top:10px;right:14px;font-size:8px;color:var(--text3);letter-spacing:4px}
+.t-cmd{color:var(--green)}.t-out{color:var(--text2)}.t-acc{color:var(--accent2)}.t-teal{color:var(--teal)}.t-amber{color:var(--amber)}.t-comment{color:var(--text3)}
+.glow-div{height:1px;background:linear-gradient(90deg,transparent 0%,var(--accent) 30%,var(--teal) 70%,transparent 100%);opacity:.3;margin:0}
+@media(max-width:768px){
+  .nav-toggle{display:flex}
+  .nav-links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:rgba(10,10,12,0.98);border-bottom:1px solid var(--border);padding:1rem 2rem 1.5rem}
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:.75rem 0}
+  .nav-cta{display:none}
+  .about-grid,.proj-grid{grid-template-columns:1fr}
+  .proj-card.featured{grid-column:span 1}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-tag,.hero-name,.hero-subtitle,.hero-links,.hero-stats{animation:none}
+  .proj-card:hover{transform:none}
+}
+body:not(.loaded) .hero-tag,body:not(.loaded) .hero-name,body:not(.loaded) .hero-subtitle,body:not(.loaded) .hero-links,body:not(.loaded) .hero-stats{opacity:0}
+</style>
+</head>
+<body>
+<div id="loader" aria-live="polite" aria-busy="true">
+  <span class="loader-logo">PS./nandyala</span>
+  <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+  <span class="loader-hint">Loading experience</span>
+</div>
+<div id="scroll-progress" role="presentation"></div>
+<div id="quest-hud">Signals: 0/3</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<nav aria-label="Primary">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo magnetic" aria-label="Poorna Sri Nandyala home" style="position:relative">PS<span>./</span>nandyala<button type="button" class="gem-hit" style="top:-4px;right:-8px" aria-label="Hidden signal 1"></button></a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+      <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="#about">about</a></li>
+      <li><a href="#research">research</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <a href="mailto:poornasri.n24@gmail.com" class="nav-cta magnetic">get in touch</a>
+  </div>
+</nav>
+
+<main id="main-content">
+<section class="hero filter-scroll" data-chapter="Act I · Origin" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <p class="hero-tag">open to internships · summer 2028</p>
+    <h1 class="hero-name" id="hero-heading">Poorna Sri<br/><em>Nandyala</em></h1>
+    <p class="hero-subtitle">CS @ IIIT Sri City — AI · EEG/BCI · networks · web3</p>
+    <div class="hero-links">
+      <a href="https://www.linkedin.com/in/poorna-sri-nandyala-06754b316" target="_blank" rel="noopener noreferrer" class="hl primary">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/PoornaSri26" target="_blank" rel="noopener noreferrer" class="hl ghost">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        GitHub
+      </a>
+      <a href="mailto:poornasri.n24@gmail.com" class="hl email" aria-label="Email poornasri.n24@gmail.com">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email
+      </a>
+    </div>
+    <div class="hero-stats" role="list" aria-label="Highlights">
+      <div class="stat" role="listitem"><span class="stat-num">12</span><span class="stat-label">GitHub Repos</span></div>
+      <div class="stat" role="listitem"><span class="stat-num">7.4</span><span class="stat-label">CGPA</span></div>
+      <div class="stat" role="listitem"><span class="stat-num">2</span><span class="stat-label">Active Research</span></div>
+      <div class="stat" role="listitem"><span class="stat-num">2028</span><span class="stat-label">Batch Year</span></div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint" aria-hidden="true"><span></span>scroll the story</div>
+</section>
+
+<section id="about" class="reveal-section unlocked" data-chapter="Act II · About" aria-labelledby="about-title">
+  <div class="section">
+    <div class="section-lock" aria-hidden="true"><span>Scroll to unlock</span></div>
+    <div class="section-inner">
+    <div class="section-header"><span class="section-num">01</span><h2 class="section-title" id="about-title">About</h2></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="about-lead"><strong>B.Tech CSE</strong> at IIIT Sri City — EEG emotion research (BCI) &amp; ML intern at NIT AP.</p>
+        <div class="about-chips" aria-label="Focus areas">
+          <span class="chip">AI / ML</span><span class="chip">EEG / BCI</span><span class="chip">Networks</span><span class="chip">Web3</span><span class="chip">Full-stack</span>
+        </div>
+      </div>
+      <div class="about-meta">
+        <div class="meta-card">
+          <div class="meta-card-top"><span class="meta-label">Education</span><span class="meta-badge badge-green">Active</span></div>
+          <div class="meta-val">IIIT Sri City</div>
+          <div class="meta-sub">B.Tech CSE · 7.4 CGPA · 2024–</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-card-top"><span class="meta-label">Research</span><span class="meta-badge badge-accent">Ongoing</span></div>
+          <div class="meta-val">EEG Emotion · BCI</div>
+          <div class="meta-sub">IIIT Sri City</div>
+        </div>
+        <div class="meta-card">
+          <div class="meta-card-top"><span class="meta-label">Internship</span><span class="meta-badge badge-amber">Ongoing</span></div>
+          <div class="meta-val">NIT Andhra Pradesh</div>
+          <div class="meta-sub">CSE · Deep Learning</div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="grid-line" role="presentation"></div>
+
+<section id="research" class="reveal-section" data-chapter="Act III · Research" aria-labelledby="research-title">
+  <div class="section">
+    <div class="section-lock" aria-hidden="true"><span>Scroll to unlock</span></div>
+    <div class="section-inner">
+    <div class="section-header"><span class="section-num">02</span><h2 class="section-title" id="research-title">Research</h2></div>
+    <article class="research-card" style="position:relative">
+      <button type="button" class="gem-hit" style="top:12px;right:12px" aria-label="Hidden signal 2"></button>
+      <div class="research-top"><span class="research-type">BCI</span><span style="font-family:var(--mono);font-size:11px;color:var(--text3)">2025</span></div>
+      <h3 class="research-title">EEG Emotion Analysis</h3>
+      <div class="research-tags">
+        <span class="rtag accent">EEG</span><span class="rtag accent">BCI</span><span class="rtag">ML</span><span class="rtag">Python</span>
+      </div>
+    </article>
+    </div>
+  </div>
+</section>
+
+<div class="grid-line" role="presentation"></div>
+
+<section id="projects" class="reveal-section" data-chapter="Act IV · Projects" aria-labelledby="projects-title">
+  <div class="section">
+    <div class="section-lock" aria-hidden="true"><span>Scroll to unlock</span></div>
+    <div class="section-inner">
+    <div class="section-header"><span class="section-num">03</span><h2 class="section-title" id="projects-title">Projects</h2></div>
+    <div class="proj-grid">
+      <a href="https://github.com/PoornaSri26/blockchain-voting-system" target="_blank" rel="noopener noreferrer" class="proj-card featured">
+        <span class="proj-lang lang-js">JavaScript</span>
+        <h3 class="proj-name">Blockchain Voting System</h3>
+        <p class="proj-desc">On-chain voting · smart contracts · wallet auth</p>
+        <div class="proj-tags"><span class="ptag">Blockchain</span><span class="ptag">Web3</span><span class="ptag">Solidity</span></div>
+        <div class="proj-footer"><span class="proj-link">GitHub <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span><span class="proj-star" aria-label="1 star">★ 1</span></div>
+      </a>
+      <a href="https://github.com/PoornaSri26/neural-turing-machine" target="_blank" rel="noopener noreferrer" class="proj-card">
+        <span class="proj-lang lang-py2">Python · AI</span>
+        <h3 class="proj-name">Neural Turing Machine</h3>
+        <div class="proj-tags"><span class="ptag">Deep Learning</span><span class="ptag">NTM</span><span class="ptag">Python</span></div>
+        <div class="proj-footer"><span class="proj-link">GitHub <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span><span class="proj-year">2025</span></div>
+      </a>
+      <a href="https://github.com/PoornaSri26/DocuMInd" target="_blank" rel="noopener noreferrer" class="proj-card">
+        <span class="proj-lang lang-nb">AI · LLM</span>
+        <h3 class="proj-name">DocuMind</h3>
+        <div class="proj-tags"><span class="ptag">LLM</span><span class="ptag">RAG</span><span class="ptag">Doc AI</span></div>
+        <div class="proj-footer"><span class="proj-link">GitHub <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span><span class="proj-year">2025</span></div>
+      </a>
+      <a href="https://github.com/PoornaSri26/web3_project" target="_blank" rel="noopener noreferrer" class="proj-card">
+        <span class="proj-lang lang-js">JavaScript · Web3</span>
+        <h3 class="proj-name">Web3 Project</h3>
+        <div class="proj-tags"><span class="ptag">Web3</span><span class="ptag">Ethereum</span><span class="ptag">DApp</span></div>
+        <div class="proj-footer"><span class="proj-link">GitHub <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span><span class="proj-year">2025</span></div>
+      </a>
+      <a href="https://github.com/PoornaSri26/GitHub-Repo-Explorer" target="_blank" rel="noopener noreferrer" class="proj-card">
+        <span class="proj-lang lang-py">Python</span>
+        <h3 class="proj-name">GitHub Repo Explorer</h3>
+        <div class="proj-tags"><span class="ptag">Python</span><span class="ptag">GitHub API</span></div>
+        <div class="proj-footer"><span class="proj-link">GitHub <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span><span class="proj-year">2025</span></div>
+      </a>
+      <a href="https://github.com/PoornaSri26" target="_blank" rel="noopener noreferrer" class="proj-card">
+        <span class="proj-lang lang-py">Python · NLP</span>
+        <h3 class="proj-name">AI Email Spam Detector</h3>
+        <div class="proj-tags"><span class="ptag">Python</span><span class="ptag">NLP</span><span class="ptag">ML</span></div>
+        <div class="proj-footer"><span class="proj-link">GitHub <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span><span class="proj-year">2025</span></div>
+      </a>
+      <a href="https://github.com/PoornaSri26" target="_blank" rel="noopener noreferrer" class="proj-card">
+        <span class="proj-lang lang-multi">Networking · Systems</span>
+        <h3 class="proj-name">AdaptiveNet-RouterLab</h3>
+        <div class="proj-tags"><span class="ptag">Networking</span><span class="ptag">Routing</span></div>
+        <div class="proj-footer"><span class="proj-link">All repos <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span><span class="proj-year">2025</span></div>
+      </a>
+      <a href="https://github.com/PoornaSri26/neural-turing-machine" target="_blank" rel="noopener noreferrer" class="proj-card secret" id="secret-project">
+        <span class="proj-lang lang-secret">🔓 Vault</span>
+        <h3 class="proj-name">Hidden: NTM Lab Notes</h3>
+        <p class="proj-desc" style="display:block">Unlocked by finding 3 signals — memory-augmented networks deep-dive.</p>
+        <div class="proj-tags"><span class="ptag">Secret</span><span class="ptag">NTM</span><span class="ptag">Research</span></div>
+        <div class="proj-footer"><span class="proj-link">Open vault <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>
+      </a>
+    </div>
+    <div class="view-all">
+      <a href="https://github.com/PoornaSri26?tab=repositories" target="_blank" rel="noopener noreferrer" class="view-all-btn">All repos → <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="grid-line" role="presentation"></div>
+
+<section id="skills" class="reveal-section" data-chapter="Act V · Skills" aria-labelledby="skills-title">
+  <div class="section">
+    <div class="section-lock" aria-hidden="true"><span>Scroll to unlock</span></div>
+    <div class="section-inner">
+    <div class="section-header"><span class="section-num">04</span><h2 class="section-title" id="skills-title">Skills</h2></div>
+    <div class="skills-wrap" aria-label="Technical skills">
+      <span class="skill-chip accent">Python</span><span class="skill-chip accent">ML</span><span class="skill-chip accent">Deep Learning</span><span class="skill-chip accent">EEG / BCI</span>
+      <span class="skill-chip">JavaScript</span><span class="skill-chip">React</span><span class="skill-chip">Node.js</span><span class="skill-chip">C</span>
+      <span class="skill-chip">DSA</span><span class="skill-chip">Networks</span><span class="skill-chip">OS</span><span class="skill-chip">Web3</span><span class="skill-chip">Git</span><span class="skill-chip">NLP</span>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="grid-line" role="presentation"></div>
+
+<section id="experience" class="reveal-section" data-chapter="Act VI · Journey" aria-labelledby="experience-title">
+  <div class="section">
+    <div class="section-lock" aria-hidden="true"><span>Scroll to unlock</span></div>
+    <div class="section-inner">
+    <div class="section-header"><span class="section-num">05</span><h2 class="section-title" id="experience-title">Living CV</h2></div>
+    <p style="font-size:13px;color:var(--text3);margin:-1rem 0 1.25rem;font-family:var(--mono)">← scroll your story →</p>
+    <div class="living-cv-wrap">
+      <div class="living-cv" role="list">
+        <article class="cv-act" data-act="I" role="listitem">
+          <h3>IIIT Sri City</h3>
+          <p>B.Tech CSE · building foundations in AI, systems, and web.</p>
+          <span class="cv-year">2024 – present · CGPA 7.4</span>
+        </article>
+        <article class="cv-act" data-act="II" role="listitem">
+          <h3>EEG Research</h3>
+          <p>Emotion analysis via brain signals — BCI &amp; ML pipeline.</p>
+          <span class="cv-year">2025 · IIIT</span>
+        </article>
+        <article class="cv-act" data-act="III" role="listitem">
+          <h3>NIT AP Intern</h3>
+          <p>Deep learning research in CSE department.</p>
+          <span class="cv-year">Summer 2025</span>
+        </article>
+        <article class="cv-act" data-act="IV" role="listitem">
+          <h3>Projects shipped</h3>
+          <p>Web3 voting, DocuMind, NTM, networking labs &amp; more.</p>
+          <span class="cv-year">12 GitHub repos</span>
+        </article>
+        <article class="cv-act" data-act="V" role="listitem">
+          <h3>Abhisarga · Events</h3>
+          <p>Led cultural fest coordination &amp; cross-team ops.</p>
+          <span class="cv-year">2024</span>
+        </article>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section reveal-section" data-chapter="Finale · Contact" aria-labelledby="contact-title">
+  <div class="section-lock" aria-hidden="true"><span>Scroll to unlock</span></div>
+  <div class="section-inner">
+  <div class="contact-inner">
+    <h2 class="contact-heading" id="contact-title">Say <em>hello</em></h2>
+    <div class="contact-links">
+      <a href="mailto:poornasri.n24@gmail.com" class="hl primary"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Send Email</a>
+      <a href="https://www.linkedin.com/in/poorna-sri-nandyala-06754b316" target="_blank" rel="noopener noreferrer" class="hl ghost"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+      <a href="https://github.com/PoornaSri26" target="_blank" rel="noopener noreferrer" class="hl ghost"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> GitHub</a>
+      <a href="tel:+919182728687" class="hl ghost" aria-label="Phone +91 91827 28687"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call</a>
+    </div>
+  </div>
+  </div>
+</section>
+</main>
+
+<footer style="position:relative">
+  <button type="button" class="gem-hit" style="bottom:1rem;right:2rem;top:auto;left:auto" aria-label="Hidden signal 3"></button>
+  <div class="footer-inner">
+    <span class="footer-text">© 2028 <span>Poorna Sri Nandyala</span> · IIIT Sri City</span>
+    <span class="footer-text"><span>poornasri.n24@gmail.com</span></span>
+  </div>
+</footer>
+
+<button type="button" id="arcade-fab" aria-label="Open arcade game"></button>
+<button type="button" id="ai-fab" aria-label="Open AI assistant"></button>
+
+<div id="ai-panel" role="dialog" aria-label="AI assistant">
+  <div class="ai-head">
+    <div class="ai-avatar">PS</div>
+    <div><strong>AI Poorna</strong><span>Portfolio co-pilot</span></div>
+  </div>
+  <div class="ai-msgs" id="ai-msgs"></div>
+  <div class="ai-chips">
+    <button type="button" class="ai-chip">Your projects?</button>
+    <button type="button" class="ai-chip">Research</button>
+    <button type="button" class="ai-chip">Contact me</button>
+  </div>
+  <form class="ai-form" id="ai-form">
+    <input type="text" id="ai-input" placeholder="Ask anything…" autocomplete="off" aria-label="Message"/>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<div class="modal-overlay" id="arcade-modal" role="dialog" aria-label="Arcade game">
+  <div class="modal-box">
+    <button type="button" class="modal-close" aria-label="Close">×</button>
+    <p class="modal-title">ARCADE · DEV MODE</p>
+    <h3>Snake — score 5+</h3>
+    <canvas id="game-canvas" width="360" height="360"></canvas>
+    <div class="game-hud"><span>Score: <strong id="game-score">0</strong></span><span id="game-status">Arrow keys</span></div>
+    <p class="game-hint">A mini-game on the portfolio — like embedding Tetris on a dev site.</p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="js/magic.js" defer></script>
+<script>
+(function(){
+  var toggle=document.querySelector('.nav-toggle');
+  var menu=document.getElementById('nav-menu');
+  if(!toggle||!menu)return;
+  function setOpen(open){
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+    toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+    menu.classList.toggle('open',open);
+  }
+  toggle.addEventListener('click',function(){setOpen(!menu.classList.contains('open'));});
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){setOpen(false);});
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')setOpen(false);
+  });
+})();
+</script>
+</body>
+</html>

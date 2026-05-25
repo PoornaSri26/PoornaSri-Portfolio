@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Poorna Sri Nandyala  CS @ IIIT Sri City">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0c"/>
+      <stop offset="100%" stop-color="#18181d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c6ef0"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect x="80" y="80" width="120" height="4" fill="url(#accent)" opacity=".9"/>
+  <text x="80" y="200" fill="#7c6ef0" font-family="ui-monospace,monospace" font-size="22" letter-spacing="3">PS./nandyala</text>
+  <text x="80" y="310" fill="#e8e8f0" font-family="Georgia,serif" font-size="72" font-weight="300">Poorna Sri Nandyala</text>
+  <text x="80" y="390" fill="#9898b0" font-family="system-ui,sans-serif" font-size="32">CS @ IIIT Sri City · AI · BCI · Web</text>
+  <text x="80" y="520" fill="#5a5a70" font-family="ui-monospace,monospace" font-size="20">poornasri.n24@gmail.com</text>
+</svg>
