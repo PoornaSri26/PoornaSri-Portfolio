@@ -153,7 +153,7 @@
     // Main wireframe icosahedron
     var geo = new THREE.IcosahedronGeometry(1.1, 1);
     var mat = new THREE.MeshBasicMaterial({
-      color: 0x7c6ef0,
+      color: 0x9d7bea,
       wireframe: true,
       transparent: true,
       opacity: 0.5
@@ -164,7 +164,7 @@
     // Inner glowing core
     var coreGeo = new THREE.IcosahedronGeometry(0.6, 0);
     var coreMat = new THREE.MeshBasicMaterial({
-      color: 0x2dd4bf,
+      color: 0xc4a7f5,
       wireframe: true,
       transparent: true,
       opacity: 0.3
@@ -180,7 +180,7 @@
     var pGeo = new THREE.BufferGeometry();
     pGeo.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
     var particles = new THREE.Points(pGeo, new THREE.PointsMaterial({
-      color: 0x2dd4bf,
+      color: 0xc4a7f5,
       size: 0.025,
       transparent: true,
       opacity: 0.7
@@ -192,7 +192,7 @@
     for (var i = 0; i < 5; i++) {
       var shapeGeo = new THREE.OctahedronGeometry(0.15 + Math.random() * 0.2, 0);
       var shapeMat = new THREE.MeshBasicMaterial({
-        color: Math.random() > 0.5 ? 0x7c6ef0 : 0x2dd4bf,
+        color: Math.random() > 0.5 ? 0x9d7bea : 0xc4a7f5,
         wireframe: true,
         transparent: true,
         opacity: 0.4
@@ -361,7 +361,7 @@
   
   function celebrateUnlock() {
     // Simple celebration animation
-    var colors = ['#7c6ef0', '#2dd4bf', '#f59e0b'];
+    var colors = ['#9d7bea', '#c4a7f5', '#e6d6fa'];
     for (var i = 0; i < 20; i++) {
       setTimeout(function() {
         var particle = document.createElement('div');
@@ -450,7 +450,7 @@
         snake.unshift(head);
         if (head.x === food.x && head.y === food.y) {
           score++;
-          createParticles(head.x * size + size/2, head.y * size + size/2, '#2dd4bf');
+          createParticles(head.x * size + size/2, head.y * size + size/2, '#c4a7f5');
           food = spawnFood(cols, rows, snake);
           
           // Increase difficulty
@@ -526,10 +526,10 @@
             s.x * size + size/2, s.y * size + size/2, size
           );
           if (i === 0) {
-            gradient.addColorStop(0, '#a594f5');
-            gradient.addColorStop(1, '#7c6ef0');
+            gradient.addColorStop(0, '#c4a7f5');
+            gradient.addColorStop(1, '#9d7bea');
           } else {
-            gradient.addColorStop(0, '#7c6ef0');
+            gradient.addColorStop(0, '#9d7bea');
             gradient.addColorStop(1, '#5a4fc7');
           }
           ctx.fillStyle = gradient;
@@ -537,9 +537,9 @@
         });
         
         // Draw food with glow
-        ctx.shadowColor = '#2dd4bf';
+        ctx.shadowColor = '#c4a7f5';
         ctx.shadowBlur = 10;
-        ctx.fillStyle = '#2dd4bf';
+        ctx.fillStyle = '#c4a7f5';
         ctx.beginPath();
         ctx.arc(food.x * size + size/2, food.y * size + size/2, size/2 - 2, 0, Math.PI * 2);
         ctx.fill();
