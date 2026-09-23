@@ -480,7 +480,7 @@
   var AI_KB = [
     { q: ['who', 'about', 'you', 'introduce'], a: "I'm Poorna Sri Nandyala — B.Tech CSE at IIIT Sri City. I build AI systems, work on EEG/BCI research, and ship projects across web3 and networking." },
     { q: ['project', 'work', 'github', 'built'], a: 'Flagship work: Blockchain Voting System, DocuMind (LLM/RAG), Neural Turing Machine, and EEG emotion analysis research. 12 repos on GitHub @PoornaSri26.' },
-    { q: ['research', 'eeg', 'bci', 'intern'], a: 'Ongoing EEG emotion analysis at IIIT Sri City (BCI). Summer research intern at NIT Andhra Pradesh — deep learning & ML.' },
+    { q: ['research', 'eeg', 'bci', 'intern'], a: 'Ongoing EEG emotion analysis at IIIT Sri City (BCI).' },
     { q: ['skill', 'stack', 'tech'], a: 'Core stack: Python, ML/DL, JavaScript, React, Web3, computer networks, OS, and signal processing for EEG.' },
     { q: ['contact', 'email', 'hire', 'intern'], a: 'Open for Summer 2026 internships & collaborations. Email: poornasri.n24@gmail.com · LinkedIn & GitHub linked on this page.' },
     { q: ['cgpa', 'education', 'college'], a: 'B.Tech CSE at IIIT Sri City (2024–present), CGPA 7.4. Institute of National Importance.' },
