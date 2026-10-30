@@ -1,6 +1,11 @@
 # Poorna Sri Nandyala — Portfolio
 
-Static portfolio site (HTML/CSS + minimal JS). Optimized for GitHub Pages with SEO, Open Graph, and accessibility basics.
+This repository contains two portfolio versions:
+
+1. **Main Portfolio** (root) - Static HTML/CSS/JS site with interactive features
+2. **VS Code Workspace** (`vscode/`) - a working VS Code clone (explorer, tabs, terminal, themes) in plain HTML/CSS/JS
+
+The main portfolio has an **Open in VS Code** button that links to `vscode/`. Both versions are static, so they deploy together to GitHub Pages.
 
 ## Local preview
 
@@ -60,3 +65,26 @@ Replace `og-image.svg` with a **1200×630 PNG** for best LinkedIn/Twitter previe
 | `robots.txt` | Crawler rules + sitemap link |
 | `sitemap.xml` | Search indexing |
 | `og-image.svg` | Social share preview (upgrade to PNG recommended) |
+
+## VS Code Workspace (`vscode/`)
+
+A hand-built VS Code clone, personalised for this portfolio — no framework, no build step.
+
+| File | Purpose |
+|------|---------|
+| `vscode/index.html` | Editor shell: title bar, activity bar, explorer, tabs, panel, status bar |
+| `vscode/style.css` | Six themes and the full VS Code layout |
+| `vscode/app.js` | File system, terminal, command palette, theme switching |
+
+**What works**
+
+- Explorer tree → opens files as tabs (Welcome.md, about.tsx, experience.tsx, projects.tsx, skills.json, research.md, contact.tsx, README.md)
+- Preview / `</> Code` toggle on every file, with syntax highlighting
+- Terminal commands: `help`, `about`, `projects`, `skills`, `research`, `contact`, `ls`, `cat <file>`, `open <file>`, `theme <name>`, `themes`, `neofetch`, `github`, `main`, `clear`
+- Command palette (`Ctrl`/`Cmd` + `Shift` + `P`), quick open (`Ctrl` + `P`), search view
+- Themes: Dark+, GitHub Dark, Dracula, One Dark Pro, Nord, Tokyo Night — remembered in the browser
+- Deep links: `vscode/?file=projects` or `vscode/#projects`
+
+**Local preview:** open `vscode/index.html` directly, or serve the repo root with `npx serve .`
+
+The older `vscode-portfolio/` directory is an unfinished Next.js experiment and is not part of the deployed site.

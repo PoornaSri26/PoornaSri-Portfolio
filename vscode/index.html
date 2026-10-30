@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark-plus">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Poorna Sri Nandyala — VS Code Portfolio</title>
+<meta name="description" content="A Visual Studio Code themed developer portfolio for Poorna Sri Nandyala — CS @ IIIT Sri City, AI · EEG/BCI · networks · web3."/>
+<meta name="theme-color" content="#1e1e1e"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23007acc' width='32' height='32' rx='6'/%3E%3Cpath d='M23 9v14l-7-4.7L11 23 7 20.5l4.6-4.5L7 11.5 11 9l5 4.7z' fill='white'/%3E%3C/svg%3E"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- ───────── TITLE BAR ───────── -->
+  <header class="titlebar">
+    <div class="titlebar-left">
+      <button class="icon-btn mobile-only" id="menu-btn" aria-label="Toggle explorer">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      </button>
+      <span class="vsc-logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path fill="#3794ff" d="M23.15 2.587 18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/></svg>
+      </span>
+      <nav class="menubar" aria-label="Menu">
+        <button type="button" data-menu="file">File</button>
+        <button type="button" data-menu="view">View</button>
+        <button type="button" data-menu="theme">Theme</button>
+        <button type="button" data-menu="help">Help</button>
+      </nav>
+    </div>
+    <div class="titlebar-center" id="title-text">about.tsx — PoornaSri-Portfolio</div>
+    <div class="titlebar-right">
+      <button class="tb-chip" id="palette-btn" title="Command palette (Ctrl+Shift+P)">
+        <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14"/></svg>
+        <span>Search</span><kbd>Ctrl ⇧ P</kbd>
+      </button>
+      <a class="tb-chip main-link" href="../" title="Back to the main portfolio">
+        <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M19 12H5m7-7-7 7 7 7"/></svg>
+        <span>Main portfolio</span>
+      </a>
+      <div class="win-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <div class="workbench">
+
+    <!-- ───────── ACTIVITY BAR ───────── -->
+    <nav class="activitybar" aria-label="Views">
+      <div class="ab-top">
+        <button class="ab-item active" data-view="explorer" title="Explorer (Ctrl+B)" aria-label="Explorer">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M17.5 0h-9L7 1.5V6H2.5L1 7.5v15.07L2.5 24h12.07L16 22.57V18h4.7l1.3-1.43V4.5zm0 2.12 2.38 2.38H17.5zm-3 20.38h-12v-15H7v9.07L8.5 18h6zm6-4h-12V4.5h7.5v6h4.5z"/></svg>
+        </button>
+        <button class="ab-item" data-view="search" title="Search" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M15.25 0a8.25 8.25 0 0 0-6.18 13.72L1 22.16 2.09 23.2l8.05-8.08A8.25 8.25 0 1 0 15.25 0m0 1.5a6.75 6.75 0 1 1-6.75 6.75 6.75 6.75 0 0 1 6.75-6.75"/></svg>
+        </button>
+        <button class="ab-item" data-view="source" title="Source Control" aria-label="Source Control">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M21.007 8.222A3.738 3.738 0 0 0 15.045 5.2a3.737 3.737 0 0 0 1.156 6.583 2.99 2.99 0 0 1-2.668 1.67h-2.99a4.456 4.456 0 0 0-2.989 1.165V7.4a3.737 3.737 0 1 0-1.494 0v9.117a3.776 3.776 0 1 0 1.816.283V13.5A3.046 3.046 0 0 1 11.53 11.5h2.99a4.477 4.477 0 0 0 4.074-2.637zM6.547 5.7a2.247 2.247 0 1 1-2.247 2.247A2.247 2.247 0 0 1 6.547 5.7M6.547 20.9a2.247 2.247 0 1 1 2.247-2.247A2.247 2.247 0 0 1 6.547 20.9m10.191-10.495a2.247 2.247 0 1 1 2.247-2.247 2.247 2.247 0 0 1-2.247 2.247"/></svg>
+        </button>
+        <button class="ab-item" data-view="extensions" title="Extensions" aria-label="Extensions">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M22.47 10.06a1.28 1.28 0 0 0-.28-1.4l-6.84-6.84a1.28 1.28 0 0 0-1.4-.28L12 2.24 10.05 1.54a1.28 1.28 0 0 0-1.4.28L1.81 8.66a1.28 1.28 0 0 0-.28 1.4L2.24 12l-.7 1.95a1.28 1.28 0 0 0 .28 1.4l6.84 6.84a1.28 1.28 0 0 0 1.4.28L12 21.76l1.95.7a1.28 1.28 0 0 0 1.4-.28l6.84-6.84a1.28 1.28 0 0 0 .28-1.4L21.76 12zM12 17.5 6.5 12 12 6.5l5.5 5.5z"/></svg>
+        </button>
+      </div>
+      <div class="ab-bottom">
+        <button class="ab-item" data-view="settings" title="Settings — color themes" aria-label="Settings">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M19.85 8.75 22.8 11 20.7 14.6l-3.3-1.05a7.3 7.3 0 0 1-1.6 1.6l1.05 3.3-3.6 2.1-2.25-2.95a7.4 7.4 0 0 1-2.25 0L6.5 20.55l-3.6-2.1 1.05-3.3a7.3 7.3 0 0 1-1.6-1.6L-1 14.6 1.1 11l2.95 2.25a7.5 7.5 0 0 1 0-2.25L1.1 8.75 3.2 5.15l3.3 1.05a7.3 7.3 0 0 1 1.6-1.6L7.05 1.3l3.6-2.1 2.25 2.95a7.4 7.4 0 0 1 2.25 0l2.25-2.95 3.6 2.1-1.05 3.3a7.3 7.3 0 0 1 1.6 1.6l3.3 1.05" transform="translate(0 3.6) scale(.95)"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </button>
+        <a class="ab-item" href="https://github.com/PoornaSri26" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+      </div>
+    </nav>
+
+    <!-- ───────── SIDEBAR ───────── -->
+    <aside class="sidebar" id="sidebar">
+      <div class="side-title" id="side-title">Explorer</div>
+      <div class="side-body" id="side-body"></div>
+    </aside>
+
+    <!-- ───────── MAIN ───────── -->
+    <section class="main">
+      <div class="editor-area">
+        <div class="tabs" id="tabs" role="tablist" aria-label="Open editors"></div>
+        <div class="editor-head">
+          <div class="breadcrumb" id="breadcrumb"></div>
+          <div class="editor-actions" id="editor-actions"></div>
+        </div>
+        <div class="editor" id="editor" role="tabpanel" tabindex="0"></div>
+      </div>
+
+      <div class="panel" id="panel">
+        <div class="panel-head">
+          <div class="panel-tabs">
+            <button class="panel-tab active" data-panel-tab="terminal">TERMINAL</button>
+            <button class="panel-tab" data-panel-tab="output">OUTPUT</button>
+            <button class="panel-tab" data-panel-tab="problems">PROBLEMS</button>
+          </div>
+          <div class="panel-actions">
+            <span class="panel-hint">Ctrl + ` to toggle</span>
+            <button class="icon-btn" id="panel-close" aria-label="Close panel">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="panel-body" id="terminal" aria-live="polite"></div>
+        <form class="term-form" id="term-form" autocomplete="off">
+          <label class="prompt" for="term-input">poorna@iiits:~/portfolio$</label>
+          <input id="term-input" name="cmd" type="text" spellcheck="false" aria-label="Terminal command" placeholder="type `help`">
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- ───────── STATUS BAR ───────── -->
+  <footer class="statusbar">
+    <div class="sb-left">
+      <span class="sb-item">
+        <svg viewBox="0 0 24 24" width="13" height="13"><path fill="currentColor" d="M21.007 8.222A3.738 3.738 0 0 0 15.045 5.2a3.737 3.737 0 0 0 1.156 6.583 2.99 2.99 0 0 1-2.668 1.67h-2.99a4.456 4.456 0 0 0-2.989 1.165V7.4a3.737 3.737 0 1 0-1.494 0v9.117a3.776 3.776 0 1 0 1.816.283V13.5A3.046 3.046 0 0 1 11.53 11.5h2.99a4.477 4.477 0 0 0 4.074-2.637z"/></svg>
+        main*
+      </span>
+      <span class="sb-item hide-sm">⊙ 0 &nbsp;△ 0</span>
+      <span class="sb-item hide-sm">⇄ 0</span>
+    </div>
+    <div class="sb-right">
+      <span class="sb-item hide-sm" id="sb-pos">Ln 1, Col 1</span>
+      <span class="sb-item hide-sm">Spaces: 2</span>
+      <span class="sb-item hide-sm">UTF-8</span>
+      <span class="sb-item" id="sb-lang">TypeScript React</span>
+      <span class="sb-item hide-sm" id="sb-theme">Dark+ (default dark)</span>
+      <span class="sb-item" id="sb-clock">00:00:00</span>
+      <span class="sb-item">⚡ Prettier</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ───────── COMMAND PALETTE ───────── -->
+<div class="overlay" id="overlay" hidden>
+  <div class="palette" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="palette-input">
+      <span class="palette-chevron">›</span>
+      <input id="palette-input" type="text" placeholder="Type a command or file name…" autocomplete="off" spellcheck="false"/>
+    </div>
+    <ul class="palette-list" id="palette-list" role="listbox"></ul>
+    <div class="palette-foot">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+      <span><kbd>↵</kbd> open</span>
+      <span><kbd>esc</kbd> dismiss</span>
+    </div>
+  </div>
+</div>
+
+<div class="menu-pop" id="menu-pop" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
