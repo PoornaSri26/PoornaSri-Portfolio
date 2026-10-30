@@ -479,21 +479,27 @@
   /* ── AI ambassador ── */
   var AI_KB = [
     { q: ['who', 'about', 'you', 'introduce'], a: "I'm Poorna Sri Nandyala — B.Tech CSE at IIIT Sri City. I build AI systems, work on EEG/BCI research, and ship projects across web3 and networking." },
-    { q: ['project', 'work', 'github', 'built'], a: 'Flagship work: Blockchain Voting System, DocuMind (LLM/RAG), Neural Turing Machine, and EEG emotion analysis research. 12 repos on GitHub @PoornaSri26.' },
-    { q: ['research', 'eeg', 'bci', 'intern'], a: 'Ongoing EEG emotion analysis at IIIT Sri City (BCI).' },
-    { q: ['skill', 'stack', 'tech'], a: 'Core stack: Python, ML/DL, JavaScript, React, Web3, computer networks, OS, and signal processing for EEG.' },
-    { q: ['contact', 'email', 'hire', 'intern'], a: 'Open for Summer 2026 internships & collaborations. Email: poornasri.n24@gmail.com · LinkedIn & GitHub linked on this page.' },
-    { q: ['cgpa', 'education', 'college'], a: 'B.Tech CSE at IIIT Sri City (2024–present), CGPA 7.4. Institute of National Importance.' },
+    { q: ['project', 'work', 'github', 'built'], a: 'Latest work: ChilliViT (compressed ViT for on-device plant disease detection), CogniFusion (EEG + eye-tracking cognitive load), a positional IR system, Telugu Spell Index, Sortoscope, GeoShape and more. 23 repos on GitHub @PoornaSri26.' },
+    { q: ['research', 'eeg', 'bci'], a: 'EEG research at IIIT Sri City: emotion analysis (BCI), plus CogniFusion — fusing EEG and eye-tracking to estimate cognitive load in real time.' },
+    { q: ['skill', 'stack', 'tech'], a: 'Core stack: Python, PyTorch, JavaScript/TypeScript, React, information retrieval, computer networks, OS, and signal processing for EEG.' },
+    { q: ['contact', 'email', 'hire', 'intern'], a: 'Open for Summer 2028 internships & collaborations. Email: poornasri.n24@gmail.com · LinkedIn & GitHub linked on this page.' },
+    { q: ['education', 'college'], a: 'B.Tech CSE at IIIT Sri City (2024–present). Institute of National Importance.' },
     { q: ['game', 'arcade', 'play'], a: 'Hit the 🎮 button bottom-right for a mini Snake game. Find 3 hidden signals on the page to unlock a secret project card.' }
   ];
 
   function aiReply(text) {
     var t = text.toLowerCase();
+    var best = null;
+    var bestLen = 0;
     for (var i = 0; i < AI_KB.length; i++) {
       for (var j = 0; j < AI_KB[i].q.length; j++) {
-        if (t.indexOf(AI_KB[i].q[j]) !== -1) return AI_KB[i].a;
+        if (t.indexOf(AI_KB[i].q[j]) !== -1 && AI_KB[i].q[j].length > bestLen) {
+          best = AI_KB[i].a;
+          bestLen = AI_KB[i].q[j].length;
+        }
       }
     }
+    if (best) return best;
     return "Ask about projects, research, skills, or how to contact me. Try: \"What are your projects?\" or \"Tell me about your research.\"";
   }
 

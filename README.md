@@ -17,21 +17,21 @@ npx --yes serve .
 
 ## Deploy to GitHub Pages
 
-1. Create a repo named `portfolio` under [PoornaSri26](https://github.com/PoornaSri26).
+1. Create a repo named `PoornaSri-Portfolio` under [PoornaSri26](https://github.com/PoornaSri26).
 2. Push this folder:
 
    ```bash
-   cd portfolio
+   cd PoornaSri-Portfolio
    git init
    git add .
    git commit -m "Add portfolio site"
    git branch -M main
-   git remote add origin https://github.com/PoornaSri26/portfolio.git
+   git remote add origin https://github.com/PoornaSri26/PoornaSri-Portfolio.git
    git push -u origin main
    ```
 
 3. On GitHub: **Settings → Pages → Build and deployment → Deploy from branch → `main` / `/ (root)`**.
-4. Site URL: `https://poornasri26.github.io/portfolio/`
+4. Site URL: `https://poornasri26.github.io/PoornaSri-Portfolio/`
 
 ## After you get a custom domain
 

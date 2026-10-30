@@ -32,68 +32,104 @@
 
   const PROJECTS = [
     {
+      name: "ChilliViT",
+      desc: "ViT-B/16 compressed 86% (327 MB → 45.6 MB) for on-device chilli disease detection — pruning, distillation and INT8 keep 81.3% accuracy at 28.6 ms/image.",
+      tags: ["Vision Transformer", "Edge AI", "Distillation", "PyTorch"],
+      lang: "Python",
+      color: "#3572A5",
+      meta: "2026",
+      url: "https://github.com/PoornaSri26/ChilliViT",
+      featured: true,
+    },
+    {
+      name: "CogniFusion",
+      desc: "EEG + eye-tracking fusion classifying cognitive load in real time, with cross-modal attention, calibrated confidence and break suggestions.",
+      tags: ["EEG", "Eye-tracking", "BCI", "Fusion"],
+      lang: "Python",
+      color: "#3572A5",
+      meta: "2026",
+      url: "https://github.com/PoornaSri26/Cogni-Fusion",
+    },
+    {
+      name: "GeoShape",
+      desc: "Real-time multiplayer geography game — identify countries, states and continents from bare outlines before time runs out.",
+      tags: ["Multiplayer", "Canvas", "Node"],
+      lang: "JavaScript",
+      color: "#f1e05a",
+      meta: "2026",
+      url: "https://github.com/PoornaSri26/GeoShape",
+    },
+    {
+      name: "NFA → DFA Simulator",
+      desc: "Subset-construction converter with live canvas state diagrams and ε-closure visualisation, deployed as a web demo.",
+      tags: ["Automata", "Canvas", "Visualiser"],
+      lang: "JavaScript",
+      color: "#f1e05a",
+      meta: "2026",
+      url: "https://github.com/PoornaSri26/NFA-to-DFA-Simulation",
+    },
+    {
+      name: "Sortoscope",
+      desc: "15 sorting algorithms recorded frame by frame — step backwards through the logic or race four algorithms on one dataset.",
+      tags: ["Algorithms", "Canvas", "Vanilla JS"],
+      lang: "HTML5 / Canvas",
+      color: "#e34c26",
+      meta: "2026",
+      url: "https://github.com/PoornaSri26/Sortoscope",
+    },
+    {
+      name: "Positional IR System",
+      desc: "Inverted index built from scratch: phrase and NEAR/ONEAR proximity queries, explainable output, Cranfield evaluation with P@k, MAP and nDCG.",
+      tags: ["Information Retrieval", "Algorithms", "Evaluation"],
+      lang: "Python",
+      color: "#3572A5",
+      meta: "2026",
+      url: "https://github.com/PoornaSri26/IR",
+    },
+    {
+      name: "Telugu Spell Index",
+      desc: "Spell-correcting search for Telugu — akshara-aware trigram index, edit distance over syllables and phonetic ranking.",
+      tags: ["Telugu", "NLP", "Spell Correction"],
+      lang: "Python",
+      color: "#3572A5",
+      meta: "2026",
+      url: "https://github.com/PoornaSri26/telugu_spell_index",
+    },
+    {
+      name: "Solo Quest",
+      desc: "Turns a to-do list into an RPG — quests, XP, ranks from E to S, daily dungeons and streaks. React + TypeScript + Prisma.",
+      tags: ["React", "Gamification", "Prisma"],
+      lang: "TypeScript",
+      color: "#3178c6",
+      meta: "★ 1",
+      url: "https://github.com/PoornaSri26/solo-quest",
+    },
+    {
+      name: "AdaptiveNet-RouterLab",
+      desc: "Network routing simulator with a live interactive topology, switchable algorithms and congestion visualisation.",
+      tags: ["Routing", "Networks", "Simulation"],
+      lang: "TypeScript",
+      color: "#3178c6",
+      meta: "2026",
+      url: "https://github.com/PoornaSri26/AdaptiveNet-RouterLab",
+    },
+    {
       name: "Blockchain Voting System",
-      desc: "On-chain voting with smart contracts and wallet authentication — tamper-proof ballots, one vote per wallet.",
+      desc: "Government-grade on-chain voting — smart contracts, wallet authentication and tamper-proof ballots.",
       tags: ["Blockchain", "Web3", "Solidity"],
       lang: "JavaScript",
       color: "#f1e05a",
       meta: "★ 1",
       url: "https://github.com/PoornaSri26/blockchain-voting-system",
-      featured: true,
-    },
-    {
-      name: "Neural Turing Machine",
-      desc: "Implementation of the Neural Turing Machine architecture — memory-augmented neural networks with differentiable attention.",
-      tags: ["Deep Learning", "NTM", "Python"],
-      lang: "Python",
-      color: "#3572A5",
-      meta: "2025",
-      url: "https://github.com/PoornaSri26/neural-turing-machine",
-    },
-    {
-      name: "DocuMind",
-      desc: "AI document intelligence using LLMs and retrieval-augmented generation for querying long documents.",
-      tags: ["LLM", "RAG", "Doc AI"],
-      lang: "Jupyter / Python",
-      color: "#DA5B0B",
-      meta: "2025",
-      url: "https://github.com/PoornaSri26/DocuMInd",
-    },
-    {
-      name: "Web3 Project",
-      desc: "Ethereum dApp with smart-contract integration and a wallet-connected front end.",
-      tags: ["Web3", "Ethereum", "DApp"],
-      lang: "JavaScript",
-      color: "#f1e05a",
-      meta: "2025",
-      url: "https://github.com/PoornaSri26/web3_project",
-    },
-    {
-      name: "GitHub Repo Explorer",
-      desc: "Python tool that explores and analyses GitHub repositories through the GitHub REST API.",
-      tags: ["Python", "GitHub API"],
-      lang: "Python",
-      color: "#3572A5",
-      meta: "2025",
-      url: "https://github.com/PoornaSri26/GitHub-Repo-Explorer",
     },
     {
       name: "AI Email Spam Detector",
-      desc: "NLP classifier that flags spam email, from text cleaning and feature extraction to evaluation.",
-      tags: ["Python", "NLP", "ML"],
+      desc: "Flask spam detector at 98.74% accuracy — TF-IDF plus eight handcrafted features feeding logistic regression.",
+      tags: ["NLP", "Flask", "ML"],
       lang: "Python",
       color: "#3572A5",
-      meta: "2025",
-      url: "https://github.com/PoornaSri26",
-    },
-    {
-      name: "AdaptiveNet-RouterLab",
-      desc: "Networking lab exploring adaptive routing behaviour and congestion response in simulated topologies.",
-      tags: ["Networking", "Routing", "Systems"],
-      lang: "C / Python",
-      color: "#555555",
-      meta: "2025",
-      url: "https://github.com/PoornaSri26",
+      meta: "2026",
+      url: "https://github.com/PoornaSri26/AI-Email-Spam-detector",
     },
   ];
 
@@ -102,18 +138,19 @@
       group: "languages",
       items: [
         ["Python", 92],
-        ["JavaScript / TypeScript", 85],
+        ["JavaScript / TypeScript", 86],
+        ["Java", 76],
         ["C", 78],
-        ["SQL", 70],
       ],
     },
     {
       group: "ai / ml",
       items: [
         ["Machine Learning", 85],
-        ["Deep Learning", 80],
-        ["EEG / BCI", 82],
-        ["NLP", 72],
+        ["Deep Learning", 82],
+        ["EEG / BCI", 84],
+        ["Computer Vision", 78],
+        ["NLP", 74],
       ],
     },
     {
@@ -128,9 +165,9 @@
     {
       group: "cs core & tools",
       items: [
-        ["Data Structures & Algorithms", 85],
+        ["Data Structures & Algorithms", 86],
         ["Computer Networks", 80],
-        ["Operating Systems", 76],
+        ["Information Retrieval", 78],
         ["Git / Linux", 84],
       ],
     },
@@ -148,9 +185,9 @@
       desc: "Emotion analysis from brain signals — signal preprocessing, feature extraction and ML classification in a BCI pipeline.",
     },
     {
-      year: "2024 — 2025",
+      year: "2025 — 2026",
       title: "Projects shipped",
-      desc: "Web3 voting, DocuMind, Neural Turing Machine, networking labs and developer tooling — 12 public repositories.",
+      desc: "ChilliViT, CogniFusion, positional IR, Sortoscope, GeoShape and more — 23 public repositories.",
     },
     {
       year: "2024",
@@ -250,8 +287,8 @@
           <span class="chip">Ctrl B — sidebar</span>
         </div>
         <h2>currently</h2>
-        <p>Open to internships for <strong>summer 2028</strong> · researching EEG emotion decoding · shipping side projects across AI and web3.</p>
-        <p class="sig">— about 12 public repos · 2 active research threads · IIIT Sri City</p>
+        <p>Open to internships for <strong>summer 2028</strong> · compressing vision transformers for on-device plant disease detection · fusing EEG and eye-tracking for cognitive-load monitoring.</p>
+        <p class="sig">— 23 public repositories · EEG &amp; cognitive-load research · IIIT Sri City</p>
       </div>`,
     code: `# Poorna Sri Nandyala
 
@@ -303,6 +340,11 @@ Research: EEG emotion decoding.
           <h4>EEG EMOTION ANALYSIS · 2025</h4>
           <p style="margin:0 0 4px"><strong>Brain–computer interfaces</strong></p>
           <p class="muted" style="margin:0">Decoding affective state from EEG recordings — preprocessing, feature engineering and classification.</p>
+        </div>
+        <div class="skill-card" style="margin-top:12px">
+          <h4>COGNIFUSION · 2026</h4>
+          <p style="margin:0 0 4px"><strong>EEG + eye-tracking fusion</strong></p>
+          <p class="muted" style="margin:0">Real-time low / medium / high cognitive-load classification with cross-modal attention, calibrated confidence and break alerts.</p>
         </div>
         <h2>elsewhere</h2>
         <p class="muted">${ME.location} · ${ME.email}</p>
@@ -360,7 +402,7 @@ export default function About() {
         </div>
         <h2>highlights</h2>
         <ul style="margin:0 0 8px 18px;padding:0;color:var(--fg)">
-          <li style="margin-bottom:6px;line-height:1.7">12 public repositories across AI, web3 and tooling.</li>
+          <li style="margin-bottom:6px;line-height:1.7">23 public repositories across edge AI, information retrieval, systems and web.</li>
           <li style="margin-bottom:6px;line-height:1.7">EEG emotion pipeline built for a BCI research thread at IIIT Sri City.</li>
           <li style="margin-bottom:6px;line-height:1.7">Led cross-team coordination for Abhisarga, the institute's cultural fest.</li>
         </ul>
@@ -389,8 +431,8 @@ export const journey: Act[] = [
   {
     year: "2024 - 2025",
     title: "Projects shipped",
-    detail: "Web3 voting, DocuMind, NTM and developer tooling.",
-    tags: ["React", "Solidity", "LLM"],
+    detail: "ChilliViT, CogniFusion, positional IR and Sortoscope.",
+    tags: ["PyTorch", "EEG", "IR"],
   },
   {
     year: "2024",
@@ -409,7 +451,7 @@ export const journey: Act[] = [
     folder: "src",
     ext: "tsx",
     lang: "TypeScript React",
-    keys: "projects blockchain voting neural turing machine documind web3 github repo explorer spam detector networking",
+    keys: "projects blockchain voting neural turing machine chilli vit vit plant disease cognifusion eeg eye tracking geoshape nfa dfa automata sortoscope ir telugu solo quest router networking spam detector",
     preview: () => `
       <div class="preview">
         <h1>Projects</h1>
@@ -442,29 +484,44 @@ export const journey: Act[] = [
 
 export const projects: Project[] = [
   {
-    name: "Blockchain Voting System",
-    stack: ["Solidity", "Web3", "JavaScript"],
-    link: "https://github.com/PoornaSri26/blockchain-voting-system",
+    name: "ChilliViT",
+    stack: ["PyTorch", "Vision Transformer", "INT8"],
+    link: "https://github.com/PoornaSri26/ChilliViT",
   },
   {
-    name: "Neural Turing Machine",
-    stack: ["Python", "Deep Learning"],
-    link: "https://github.com/PoornaSri26/neural-turing-machine",
+    name: "CogniFusion",
+    stack: ["EEG", "Eye-tracking", "Fusion"],
+    link: "https://github.com/PoornaSri26/Cogni-Fusion",
   },
   {
-    name: "DocuMind",
-    stack: ["LLM", "RAG", "Python"],
-    link: "https://github.com/PoornaSri26/DocuMInd",
+    name: "GeoShape",
+    stack: ["JavaScript", "Realtime", "Canvas"],
+    link: "https://github.com/PoornaSri26/GeoShape",
   },
   {
-    name: "Web3 Project",
-    stack: ["Ethereum", "DApp"],
-    link: "https://github.com/PoornaSri26/web3_project",
+    name: "NFA to DFA Simulator",
+    stack: ["Automata", "Canvas"],
+    link: "https://github.com/PoornaSri26/NFA-to-DFA-Simulation",
   },
   {
-    name: "GitHub Repo Explorer",
-    stack: ["Python", "GitHub API"],
-    link: "https://github.com/PoornaSri26/GitHub-Repo-Explorer",
+    name: "Sortoscope",
+    stack: ["Algorithms", "Canvas"],
+    link: "https://github.com/PoornaSri26/Sortoscope",
+  },
+  {
+    name: "Positional IR System",
+    stack: ["Information Retrieval", "Python"],
+    link: "https://github.com/PoornaSri26/IR",
+  },
+  {
+    name: "Telugu Spell Index",
+    stack: ["NLP", "Telugu", "IR"],
+    link: "https://github.com/PoornaSri26/telugu_spell_index",
+  },
+  {
+    name: "Solo Quest",
+    stack: ["React", "TypeScript", "Prisma"],
+    link: "https://github.com/PoornaSri26/solo-quest",
   },
 ];
 `,
@@ -505,12 +562,12 @@ export const projects: Project[] = [
         </div>
       </div>`,
     code: `{
-  "languages": ["Python", "JavaScript", "TypeScript", "C", "SQL"],
-  "ai_ml": ["Machine Learning", "Deep Learning", "EEG / BCI", "NLP"],
+  "languages": ["Python", "JavaScript", "TypeScript", "Java", "C", "SQL"],
+  "ai_ml": ["Machine Learning", "Deep Learning", "EEG / BCI", "Computer Vision", "NLP"],
   "web": ["React", "Node.js", "HTML", "CSS", "Web3 / Solidity"],
-  "core": ["DSA", "Computer Networks", "Operating Systems", "DBMS"],
-  "tools": ["Git", "Linux", "VS Code", "Jupyter", "Prisma", "Vite"],
-  "learning": ["Transformers", "System Design", "Rust"],
+  "core": ["DSA", "Computer Networks", "Information Retrieval", "Operating Systems"],
+  "tools": ["PyTorch", "Git", "Linux", "VS Code", "Jupyter", "Prisma", "Vite"],
+  "learning": ["Model Compression", "System Design", "Rust"],
   "open_to": "internships - summer 2028"
 }
 `,
@@ -542,8 +599,14 @@ export const projects: Project[] = [
           <li style="line-height:1.75">Do frequency-band features generalise across sessions?</li>
           <li style="line-height:1.75">Where do transformers beat hand-engineered features on short windows?</li>
         </ul>
+        <h2>cognifusion</h2>
+        <div class="chips">
+          <span class="chip on">EEG</span><span class="chip on">Eye-tracking</span>
+          <span class="chip">Fusion</span><span class="chip">2026</span>
+        </div>
+        <p>EEG alone is noisy and eye-tracking alone says little about effort. CogniFusion fuses both into a real-time cognitive-load estimate (low / medium / high) with cross-modal attention, an ensemble fallback, calibrated confidence and break suggestions.</p>
         <h2>interests</h2>
-        <p>Memory-augmented networks (my Neural Turing Machine build), affective computing, and efficient models that run on modest hardware.</p>
+        <p>Memory-augmented networks (my Neural Turing Machine build), cognitive-load modelling, and efficient models that run on modest hardware like the compressed ViT in ChilliViT.</p>
         <p class="sig">// happy to talk BCI — ${ME.email}</p>
       </div>`,
     code: `# EEG Emotion Analysis
@@ -1150,7 +1213,7 @@ Tags: EEG · BCI · ML · Python`);
 <span class="ok">Shell</span>    zsh 5.9
 <span class="ok">Theme</span>    ${(THEMES.find((t) => t.id === state.theme) || THEMES[0]).label}
 <span class="ok">Editor</span>   VS Code (obviously)
-<span class="ok">Repos</span>    12
+<span class="ok">Repos</span>    23
 <span class="ok">Research</span> EEG · BCI
 <span class="ok">Uptime</span>   since 2024
 <span class="ok">Status</span>   open to internships · summer 2028`);
