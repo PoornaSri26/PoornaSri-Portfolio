@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://poornasri26.github.io/PoornaSri-Portfolio/sitemap.xml
