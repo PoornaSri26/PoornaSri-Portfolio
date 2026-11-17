@@ -183,7 +183,15 @@ footer{background:rgba(12,8,18,0.88);border-top:1px solid var(--border);padding:
 #term-app:focus-within{border-color:var(--accent)}
 .term-out{min-height:200px;max-height:380px;overflow-y:auto;margin-top:.5rem;padding-right:.5rem}
 .term-line{white-space:pre-wrap;word-break:break-word}
-.term-line.err{color:#e08a8a}
+.term-line.err{color:var(--terr,#e08a8a)}
+#term-app{--terr:#e08a8a}
+#term-app.tt-amber{--bg3:#171006;--border2:#5a4416;--text:#ffb84d;--text2:#d99e4e;--text3:#8a6a35;--accent2:#ffd98a;--green:#9dff9d;--teal:#ffcf7d;--amber:#ffe6b0;--terr:#ff9d7a}
+#term-app.tt-amber .term-line{text-shadow:0 0 8px rgba(255,170,0,.35)}
+#term-app.tt-amber::after{content:'';position:absolute;inset:0;border-radius:inherit;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);pointer-events:none}
+#term-app.tt-glass{--bg3:linear-gradient(135deg,rgba(40,20,70,.92),rgba(15,8,30,.96));--border2:#6d4fd1;--text:#efe6ff;--text2:#b9a8e8;--text3:#7d6ba8;--accent2:#d9c2ff;--green:#8ef0c8;--teal:#c4a7f5;--amber:#e6d6fa;--terr:#ff9d9d}
+#term-app.tt-paper{--bg3:#f4ecd8;--border2:#b8a888;--text:#2b2118;--text2:#5a4a38;--text3:#9a8a72;--accent2:#7a4fd1;--green:#2e7d32;--teal:#6d4fd1;--amber:#a16207;--terr:#b3261e}
+#term-app.tt-matrix{--bg3:#020a04;--border2:#1d5c2e;--text:#33ff66;--text2:#2ecc55;--text3:#1e7a38;--accent2:#66ff99;--green:#33ff66;--teal:#7dffab;--amber:#aaffcc;--terr:#ff6666}
+#term-app.tt-matrix .term-line{text-shadow:0 0 8px rgba(51,255,102,.4)}
 .term-row{display:flex;align-items:baseline;gap:.5rem;margin-top:.75rem}
 .term-prompt{color:var(--accent2);flex:0 0 auto;user-select:none}
 .term-input{flex:1;min-width:0;background:transparent;border:none;color:var(--text);font-family:var(--mono);font-size:12px;caret-color:var(--accent2)}
@@ -191,6 +199,9 @@ footer{background:rgba(12,8,18,0.88);border-top:1px solid var(--border);padding:
 .term-input:focus{outline:none}
 .term-out a{color:var(--accent2);text-decoration:underline;text-underline-offset:3px}
 .term-hint{font-family:var(--mono);font-size:10px;color:var(--text3);margin-top:.75rem;text-align:center;letter-spacing:.05em}
+.term-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.9rem}
+.term-chip{font-family:var(--mono);font-size:11px;padding:6px 12px;border-radius:20px;border:1px solid var(--border2);background:transparent;color:var(--text3);cursor:pointer;transition:all .2s}
+.term-chip:hover{border-color:var(--accent2);color:var(--text);background:rgba(157,123,234,.08)}
 .glow-div{height:1px;background:linear-gradient(90deg,transparent 0%,var(--accent) 30%,var(--accent2) 70%,transparent 100%);opacity:.3;margin:0}
 @media(max-width:768px){
   .nav-toggle{display:flex}
@@ -495,8 +506,16 @@ body:not(.loaded) .hero-tag,body:not(.loaded) .hero-name,body:not(.loaded) .hero
         <span class="term-prompt" aria-hidden="true">poorna@iiit:~$</span>
         <input class="term-input" id="term-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="Terminal command input"/>
       </form>
+      <div class="term-chips">
+        <button type="button" class="term-chip" data-cmd="help">help</button>
+        <button type="button" class="term-chip" data-cmd="about">about</button>
+        <button type="button" class="term-chip" data-cmd="projects">projects</button>
+        <button type="button" class="term-chip" data-cmd="fetch">fetch</button>
+        <button type="button" class="term-chip" data-cmd="theme">theme</button>
+        <button type="button" class="term-chip" data-cmd="whoami">whoami</button>
+      </div>
     </div>
-    <p class="term-hint">commands: help · about · projects · skills · experience · contact · whoami · clear</p>
+    <p class="term-hint">tap a command or type your own — try 'theme amber', 'fetch', 'why-hire-me'</p>
     </div>
   </div>
 </section>
@@ -562,6 +581,7 @@ body:not(.loaded) .hero-tag,body:not(.loaded) .hero-name,body:not(.loaded) .hero
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 <script src="js/magic.js" defer></script>
+<script src="js/terminal.js" defer></script>
 <script>
 (function(){
   var toggle=document.querySelector('.nav-toggle');
