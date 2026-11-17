@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poorna Sri | Portfolio & Interactive Shell</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>@keyframes pulse-glow{0%,to{box-shadow:0 0 15px #ff69b466}50%{box-shadow:0 0 25px #ff69b4cc}}.neon-border{border:1px solid #ff69b480;animation:3s ease-in-out infinite pulse-glow}.custom-scrollbar::-webkit-scrollbar{width:6px}.custom-scrollbar::-webkit-scrollbar-track{background:#0003}.custom-scrollbar::-webkit-scrollbar-thumb{background:#ff69b466;border-radius:3px}.custom-scrollbar::-webkit-scrollbar-thumb:hover{background:#ff69b4b3}</style>
+</head>
+<body class="bg-[#0b0c14] text-gray-100 font-sans min-h-screen relative overflow-x-hidden">
+
+  <!-- Navbar -->
+  <header class="border-b border-white/10 bg-[#0e101c]/80 backdrop-blur-md sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#FF69B4] to-[#764ba2] flex items-center justify-center font-mono font-bold text-white shadow-md">
+          PS
+        </div>
+        <div>
+          <span class="font-bold tracking-wide text-white">POORNA SRI</span>
+          <span class="text-xs text-[#00F0FF] font-mono ml-1.5">CSE '28</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a href="#about" class="hover:text-[#FF69B4] transition-colors">About</a>
+        <a href="#projects" class="hover:text-[#FF69B4] transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-[#FF69B4] transition-colors">Skills</a>
+        <a href="#contact" class="hover:text-[#FF69B4] transition-colors">Contact</a>
+      </nav>
+
+      <!-- Signature "Go to my shell" Action Button -->
+      <button id="openShellBtn" class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-[#FF69B4]/60 bg-[#FF69B4]/10 hover:bg-[#FF69B4]/25 text-[#FF69B4] text-xs sm:text-sm font-mono shadow-[0_0_15px_rgba(255,105,180,0.3)] hover:shadow-[0_0_20px_rgba(255,105,180,0.6)] transition-all transform hover:-translate-y-0.5 cursor-pointer">
+        <span class="text-[#00FF66] font-bold">&gt;_</span>
+        <span>Go to my shell</span>
+        <kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] bg-black/60 border border-[#FF69B4]/30 rounded text-gray-300">`</kbd>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF69B4]/10 border border-[#FF69B4]/30 text-[#FF69B4] text-xs font-mono mb-6">
+        <span class="w-2 h-2 rounded-full bg-[#00FF66] animate-pulse"></span>
+        CASE_FILE: PS-0926 · RECRUITER_CLEARANCE: APPROVED
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
+        Building the future, <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF69B4] via-[#bd93f9] to-[#00F0FF]">
+          one commit at a time.
+        </span>
+      </h1>
+      <p class="text-lg text-gray-300 leading-relaxed mb-8">
+        Computer Science & Engineering undergraduate at <strong class="text-white">IIIT Sri City</strong> specializing in Full-Stack Engineering, Vision Transformers, and Multimodal AI Systems.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <button id="openShellHeroBtn" class="px-6 py-3 rounded-xl bg-gradient-to-r from-[#FF69B4] to-[#764ba2] text-white font-mono font-medium shadow-lg hover:shadow-[0_0_25px_rgba(255,105,180,0.6)] transition-all transform hover:scale-105 flex items-center gap-2 cursor-pointer">
+          <span class="text-[#00FF66] font-bold">&gt;_</span>
+          Launch Interactive Terminal
+        </button>
+        <a href="https://github.com/PoornaSri26" target="_blank" class="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-200 font-medium transition-all">
+          GitHub Profile ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured Projects Grid -->
+    <section id="projects" class="mt-24">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white">Featured Projects</h2>
+          <p class="text-sm text-gray-400 mt-1">Simulate any of these projects in real-time inside the shell!</p>
+        </div>
+        <span class="text-xs font-mono text-[#FF69B4]">TRY IN CLI: 'projects'</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Solo Quest -->
+        <div class="p-6 rounded-2xl bg-[#121422] border border-white/10 hover:border-[#FF69B4]/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-[#FF69B4]/15 text-[#FF69B4]">Gamified RPG</span>
+              <span class="text-xs text-gray-400">React · TypeScript</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Solo Quest</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Solo Leveling inspired gamified productivity application with quests, dungeon gates, and hunter ranks (E to S).
+            </p>
+          </div>
+          <button onclick="triggerShellCmd('solo-quest')" class="mt-4 text-xs font-mono text-[#00F0FF] hover:underline flex items-center gap-1 cursor-pointer">
+            &gt; Play dungeon in shell ↗
+          </button>
+        </div>
+
+        <!-- Cogni-Fusion -->
+        <div class="p-6 rounded-2xl bg-[#121422] border border-white/10 hover:border-[#00F0FF]/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-[#00F0FF]/15 text-[#00F0FF]">Multimodal AI</span>
+              <span class="text-xs text-gray-400">PyTorch · LightGBM</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Cogni-Fusion</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Real-time cognitive load monitoring system via EEG signal processing, eye-tracking telemetry, and differential evolution.
+            </p>
+          </div>
+          <button onclick="triggerShellCmd('cogni-scan')" class="mt-4 text-xs font-mono text-[#00F0FF] hover:underline flex items-center gap-1 cursor-pointer">
+            &gt; Stream EEG telemetry in shell ↗
+          </button>
+        </div>
+
+        <!-- AI Spam Detector -->
+        <div class="p-6 rounded-2xl bg-[#121422] border border-white/10 hover:border-[#00FF66]/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-[#00FF66]/15 text-[#00FF66]">98.74% Accuracy</span>
+              <span class="text-xs text-gray-400">NLP · Scikit-Learn</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">AI Spam Detector</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Production NLP classification pipeline with TF-IDF, handcrafted features, and 0.95 F1-score with real-time confidence scores.
+            </p>
+          </div>
+          <button onclick="triggerShellCmd('spam-check Congratulations you won a free cash voucher')" class="mt-4 text-xs font-mono text-[#00F0FF] hover:underline flex items-center gap-1 cursor-pointer">
+            &gt; Test sample classification ↗
+          </button>
+        </div>
+
+        <!-- Sortoscope -->
+        <div class="p-6 rounded-2xl bg-[#121422] border border-white/10 hover:border-[#bd93f9]/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-[#bd93f9]/15 text-[#bd93f9]">Algorithms</span>
+              <span class="text-xs text-gray-400">Web Audio · Canvas</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Sortoscope</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              15+ sorting algorithms visualizer with synchronized pseudocode, sound synthesis, and multi-algorithm Race Mode.
+            </p>
+          </div>
+          <button onclick="triggerShellCmd('sort-race quick bubble')" class="mt-4 text-xs font-mono text-[#00F0FF] hover:underline flex items-center gap-1 cursor-pointer">
+            &gt; Run Sort Race in shell ↗
+          </button>
+        </div>
+
+        <!-- GeoShape -->
+        <div class="p-6 rounded-2xl bg-[#121422] border border-white/10 hover:border-amber-400/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-amber-400/15 text-amber-300">Multiplayer Web</span>
+              <span class="text-xs text-gray-400">Svelte 5 · D3 Geo</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">GeoShape</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Real-time multiplayer geography boundary guessing game with custom room codes, WebSockets, and SQLite.
+            </p>
+          </div>
+          <button onclick="triggerShellCmd('projects')" class="mt-4 text-xs font-mono text-[#00F0FF] hover:underline flex items-center gap-1 cursor-pointer">
+            &gt; View specs in shell ↗
+          </button>
+        </div>
+
+        <!-- AdaptiveNet-RouterLab -->
+        <div class="p-6 rounded-2xl bg-[#121422] border border-white/10 hover:border-[#FF69B4]/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-[#FF69B4]/15 text-[#FF69B4]">Networking</span>
+              <span class="text-xs text-gray-400">Dijkstra · React · D3</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">AdaptiveNet-RouterLab</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Interactive network routing topology editor simulating packet flows, link failures, and dynamic shortest paths.
+            </p>
+          </div>
+          <button onclick="triggerShellCmd('route NodeA NodeD')" class="mt-4 text-xs font-mono text-[#00F0FF] hover:underline flex items-center gap-1 cursor-pointer">
+            &gt; Compute Dijkstra path in shell ↗
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="mt-24">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-8">Technical Arsenal</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-[#121422] border border-white/10">
+          <h3 class="text-lg font-bold text-[#FF69B4] mb-4">Core Languages</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Python, TypeScript, JavaScript (ES6+), C, Java, SQL, Solidity, Rust, Go.
+          </p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#121422] border border-white/10">
+          <h3 class="text-lg font-bold text-[#00F0FF] mb-4">Frontend & Viz</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            React, Next.js, Svelte 5, Tailwind CSS, D3-Geo, HTML5 Canvas, WebSockets, Three.js.
+          </p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#121422] border border-white/10">
+          <h3 class="text-lg font-bold text-[#00FF66] mb-4">AI / ML & Backend</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            PyTorch, Vision Transformers, NLP, LightGBM, Node.js, FastAPI, NestJS, Prisma, Docker.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="mt-24 border-t border-white/10 pt-16 mb-12">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div>
+          <h2 class="text-2xl font-bold text-white">Let's build something exceptional.</h2>
+          <p class="text-sm text-gray-400 mt-1">poornasri.n24@iiits.in · IIIT Sri City</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://github.com/PoornaSri26" target="_blank" class="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-sm">
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/poornasri26" target="_blank" class="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-sm">
+            LinkedIn
+          </a>
+          <a href="mailto:poornasri.n24@iiits.in" class="px-4 py-2 rounded-lg bg-[#FF69B4]/20 hover:bg-[#FF69B4]/30 border border-[#FF69B4]/40 text-[#FF69B4] text-sm">
+            Email Me
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Sticky Action Button (Bottom Right) -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <button id="floatingShellBtn" class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-[#FF69B4] to-[#764ba2] text-white font-mono text-sm font-semibold shadow-lg hover:shadow-[0_0_25px_rgba(255,105,180,0.8)] transition-all transform hover:scale-105 cursor-pointer">
+      <span class="text-[#00FF66] font-bold">&gt;_</span>
+      <span>Open Shell</span>
+      <span class="w-2 h-2 rounded-full bg-[#00FF66] animate-pulse"></span>
+    </button>
+  </div>
+
+  <!-- The pssh Shell Modal -->
+  <div id="shellModal" class="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-6 bg-black/75 backdrop-blur-md hidden">
+    <div id="shellContainer" class="w-full max-w-4xl h-[85vh] flex flex-col rounded-xl overflow-hidden neon-border bg-[#0b0c14]/95 shadow-2xl transition-all font-mono text-sm">
+      
+      <!-- Window Title Bar -->
+      <div class="flex items-center justify-between px-4 py-2.5 bg-[#141624] border-b border-[#FF69B4]/30 select-none">
+        <div class="flex items-center gap-2">
+          <button id="closeShellDot" class="w-3.5 h-3.5 rounded-full bg-red-500 hover:bg-red-600 transition-colors cursor-pointer" title="Close (Esc)"></button>
+          <button id="maximizeShellDot" class="w-3.5 h-3.5 rounded-full bg-yellow-500 hover:bg-yellow-600 transition-colors cursor-pointer" title="Toggle Fullscreen"></button>
+          <button id="minimizeShellDot" class="w-3.5 h-3.5 rounded-full bg-green-500 hover:bg-green-600 transition-colors cursor-pointer" title="Return to GUI"></button>
+          <span class="ml-3 text-xs text-gray-300 hidden sm:inline-block">poorna@iiits: ~/portfolio (pssh v2.4)</span>
+        </div>
+
+        <div class="flex items-center gap-3 text-xs">
+          <button id="audioToggleBtn" class="text-gray-300 hover:text-white transition-colors cursor-pointer">🔊 Sound ON</button>
+          <span class="text-white/20">|</span>
+          <button id="closeShellAction" class="px-2 py-0.5 rounded bg-[#FF69B4]/20 hover:bg-[#FF69B4]/40 text-[#FF69B4] text-xs font-semibold transition-colors cursor-pointer">
+            Return to Visual GUI ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Output Screen -->
+      <div id="terminalBody" class="flex-1 p-4 overflow-y-auto space-y-2 select-text custom-scrollbar cursor-text text-[#00F0FF]">
+      </div>
+
+      <!-- Live Input Bar -->
+      <div class="px-4 py-2 bg-black/40 border-t border-white/5 flex items-center gap-2">
+        <span class="text-[#FF69B4] font-bold">poorna@iiits</span>
+        <span class="text-white/40">:</span>
+        <span class="text-[#00FF66]">~/portfolio$</span>
+        <input id="terminalInput" type="text" class="flex-1 bg-transparent border-none outline-none text-white font-mono caret-[#FF69B4] p-0 m-0" autocomplete="off" spellcheck="false" autofocus />
+      </div>
+
+      <!-- Bottom Quick Commands Bar -->
+      <div class="px-4 py-1.5 bg-black/60 border-t border-white/5 text-[11px] text-gray-400 flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-1.5">
+          <span>Quick Run:</span>
+          <button onclick="triggerShellCmd('psfetch')" class="px-1.5 py-0.5 rounded bg-white/5 hover:bg-white/10 text-gray-300 cursor-pointer">psfetch</button>
+          <button onclick="triggerShellCmd('solo-quest')" class="px-1.5 py-0.5 rounded bg-white/5 hover:bg-white/10 text-gray-300 cursor-pointer">solo-quest</button>
+          <button onclick="triggerShellCmd('spam-check congratulations you won $1000')" class="px-1.5 py-0.5 rounded bg-white/5 hover:bg-white/10 text-gray-300 cursor-pointer">spam-check</button>
+          <button onclick="triggerShellCmd('sort-race quick bubble')" class="px-1.5 py-0.5 rounded bg-white/5 hover:bg-white/10 text-gray-300 cursor-pointer">sort-race</button>
+          <button onclick="triggerShellCmd('help')" class="px-1.5 py-0.5 rounded bg-white/5 hover:bg-white/10 text-gray-300 cursor-pointer">help</button>
+        </div>
+        <div class="hidden sm:inline-block opacity-60">Press ` (Backtick) or Esc to toggle</div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    let soundEnabled = true;
+    function playClick() {
+      if (!soundEnabled) return;
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(460 + Math.random() * 80, ctx.currentTime);
+        gain.gain.setValueAtTime(0.012, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.035);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.035);
+      } catch (e) {}
+    }
+
+    const shellModal = document.getElementById("shellModal");
+    const terminalBody = document.getElementById("terminalBody");
+    const terminalInput = document.getElementById("terminalInput");
+    const openShellBtn = document.getElementById("openShellBtn");
+    const openShellHeroBtn = document.getElementById("openShellHeroBtn");
+    const floatingShellBtn = document.getElementById("floatingShellBtn");
+    const closeShellDot = document.getElementById("closeShellDot");
+    const minimizeShellDot = document.getElementById("minimizeShellDot");
+    const maximizeShellDot = document.getElementById("maximizeShellDot");
+    const closeShellAction = document.getElementById("closeShellAction");
+    const audioToggleBtn = document.getElementById("audioToggleBtn");
+    const shellContainer = document.getElementById("shellContainer");
+
+    let isMaximized = false;
+    let cmdHistory = [];
+    let historyPointer = -1;
+
+    let questState = { active: false, hp: 100, bossHp: 80, rank: "E-Rank Hunter" };
+
+    function openShell() {
+      shellModal.classList.remove("hidden");
+      setTimeout(() => terminalInput.focus(), 60);
+    }
+
+    function closeShell() {
+      shellModal.classList.add("hidden");
+    }
+
+    openShellBtn.addEventListener("click", openShell);
+    openShellHeroBtn.addEventListener("click", openShell);
+    floatingShellBtn.addEventListener("click", openShell);
+    closeShellDot.addEventListener("click", closeShell);
+    minimizeShellDot.addEventListener("click", closeShell);
+    closeShellAction.addEventListener("click", closeShell);
+
+    maximizeShellDot.addEventListener("click", () => {
+      isMaximized = !isMaximized;
+      if (isMaximized) {
+        shellContainer.classList.remove("max-w-4xl", "h-[85vh]");
+        shellContainer.classList.add("w-full", "h-full", "max-w-none");
+      } else {
+        shellContainer.classList.add("max-w-4xl", "h-[85vh]");
+        shellContainer.classList.remove("w-full", "h-full", "max-w-none");
+      }
+    });
+
+    audioToggleBtn.addEventListener("click", () => {
+      soundEnabled = !soundEnabled;
+      audioToggleBtn.textContent = soundEnabled ? "🔊 Sound ON" : "🔇 Muted";
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "`" && !e.ctrlKey && !e.metaKey && e.target.tagName !== "INPUT" && e.target.tagName !== "TEXTAREA") {
+        e.preventDefault();
+        shellModal.classList.contains("hidden") ? openShell() : closeShell();
+      } else if (e.key === "Escape" && !shellModal.classList.contains("hidden")) {
+        closeShell();
+      }
+    });
+
+    function appendLine(html, isPrompt = false) {
+      const lineDiv = document.createElement("div");
+      lineDiv.className = isPrompt ? "flex items-center gap-2" : "whitespace-pre-wrap leading-relaxed";
+      lineDiv.innerHTML = html;
+      terminalBody.appendChild(lineDiv);
+      terminalBody.scrollTop = terminalBody.scrollHeight;
+    }
+
+    function initShell() {
+      appendLine(`<span class="text-gray-400">==================================================================</span>`);
+      appendLine(`<span class="text-[#FF69B4] font-bold">  ⚡ Welcome to pssh v2.4 (Poorna Sri Shell) - PS-OS 2028 Edition</span>`);
+      appendLine(`<span class="text-[#00FF66]">  ⚡ IIIT Sri City CSE | Systems · Full-Stack · AI/ML</span>`);
+      appendLine(`<span class="text-gray-400">==================================================================</span>`);
+      appendLine(`Type <span class="text-white font-bold">'help'</span> for command index, <span class="text-white font-bold">'psfetch'</span> for system telemetry, or <span class="text-white font-bold">'solo-quest'</span> to launch the RPG dungeon.`);
+      appendLine(`Type <span class="text-white font-bold">'exit'</span> or press [Esc] / [\`] to return to visual portfolio.\n`);
+    }
+
+    initShell();
+
+    function triggerShellCmd(cmd) {
+      openShell();
+      terminalInput.value = cmd;
+      executeCommand(cmd);
+      terminalInput.value = "";
+    }
+
+    function executeCommand(raw) {
+      const trimmed = raw.trim();
+      if (!trimmed) {
+        appendLine(`<span class="text-[#FF69B4] font-bold">poorna@iiits</span><span class="text-white/40">:</span><span class="text-[#00FF66]">~/portfolio$</span>`, true);
+        return;
+      }
+
+      cmdHistory.push(trimmed);
+      historyPointer = -1;
+
+      appendLine(`<span class="text-[#FF69B4] font-bold">poorna@iiits</span><span class="text-white/40">:</span><span class="text-[#00FF66]">~/portfolio$</span> <span class="text-white">${trimmed}</span>`, true);
+
+      const [cmd, ...args] = trimmed.split(" ");
+      const lower = cmd.toLowerCase();
+      const argStr = args.join(" ");
+
+      if (questState.active && ["attack", "heal", "run", "status"].includes(lower)) {
+        handleRpgAction(lower);
+        return;
+      }
+
+      switch (lower) {
+        case "help":
+        case "?":
+          appendLine(`----------------------------------------------------------------
+<span class="text-[#FF69B4] font-bold">pssh Command Registry:</span>
+----------------------------------------------------------------
+  [Navigation & Profile]
+    <span class="text-white">about / bio</span>     : Poorna Sri's academic & engineering summary
+    <span class="text-white">projects</span>        : Flagship systems, AI/ML & full-stack projects
+    <span class="text-white">skills</span>          : Categorized matrix of languages & frameworks
+    <span class="text-white">psfetch</span>         : Neofetch system telemetry & ASCII banner
+    <span class="text-white">resume / cv</span>     : Resume details & download links
+    <span class="text-white">contact</span>         : Email, LinkedIn, and GitHub links
+
+  [Interactive Project Simulators]
+    <span class="text-white">solo-quest</span>      : Launch in-shell text RPG dungeon crawler
+    <span class="text-white">spam-check &lt;t&gt;</span>  : Real-time NLP spam classification test (98.74% accuracy model)
+    <span class="text-white">sort-race &lt;a b&gt;</span> : Live ASCII race between two sorting algorithms (Sortoscope)
+    <span class="text-white">cogni-scan</span>      : Simulate EEG cognitive load telemetry (Cogni-Fusion)
+    <span class="text-white">route &lt;A B&gt;</span>     : Simulate Dijkstra shortest path (AdaptiveNet-RouterLab)
+
+  [System]
+    <span class="text-white">clear / cls</span>     : Clear terminal screen
+    <span class="text-white">matrix</span>          : Digital code rain stream
+    <span class="text-white">sudo</span>            : Security gate simulation
+    <span class="text-white">exit / gui</span>      : Close shell and return to visual portfolio
+----------------------------------------------------------------`);
+          break;
+
+        case "about":
+        case "bio":
+        case "whoami":
+          appendLine(`Poorna Sri Nandyala (CASE_FILE: PS-0926)
+----------------------------------------------------------------
+Role      : Full-Stack Engineer · AI/ML Enthusiast · Systems Builder
+College   : Indian Institute of Information Technology (IIIT), Sri City
+Program   : B.Tech in Computer Science and Engineering (2024-2028)
+Motto     : "Building the future, one commit at a time."
+Focus     : Vision Transformers, Multimodal EEG Fusion, Svelte 5 / Next.js,
+            Distributed Systems, and gamified web experiences.
+Status    : RECRUITER_CLEARANCE: APPROVED (Open to internships/collabs)`);
+          break;
+
+        case "psfetch":
+          appendLine(`<span class="text-[#FF69B4] font-mono">   ____                                      ____       _ 
+  |  _ \\ ___   ___  _ __ _ __   __ _        / ___| _ __(_)
+  | |_) / _ \\ / _ \\| '__| '_ \\ / _` | _____ \\___ \\| '__| |
+  |  __/ (_) | (_) | |  | | | | (_| | _____ |___) | |  | |
+  |_|   \\___/ \\___/|_|  |_| |_|\\__,_|       |____/|_|  |_|</span>
+
+  <span class="text-gray-300">OS        : PoornaOS 2028 (IIIT Sri City CSE Edition)</span>
+  <span class="text-gray-300">Host      : Neural-Mesh v4.2 [x86_64]</span>
+  <span class="text-gray-300">Kernel    : FullStack-AIML-Hybrid-2028</span>
+  <span class="text-gray-300">Hunter    : S-Rank Systems Architect (Solo Quest Guild)</span>
+  <span class="text-gray-300">Uptime    : 4 Semesters of continuous innovation</span>
+  <span class="text-gray-300">Stack     : PyTorch / React / Svelte 5 / NestJS / D3 / TypeScript</span>
+  <span class="text-[#00FF66]">Status    : ONLINE & DEPLOYED</span>`);
+          break;
+
+        case "projects":
+          appendLine(`<span class="text-[#FF69B4] font-bold">================================================================
+  FLAGSHIP PROJECTS (Poorna Sri Portfolio):
+================================================================</span>
+  [1] <span class="text-white font-bold">Solo Quest</span>
+      • Solo Leveling inspired gamified task & productivity RPG.
+      • Stack: React, TypeScript, Node.js, Prisma, Tailwind CSS.
+      • Run command <span class="text-[#00FF66]">'solo-quest'</span> to play directly in this shell!
+
+  [2] <span class="text-white font-bold">Cogni-Fusion</span>
+      • Real-time multimodal cognitive load monitoring via EEG + eye tracking.
+      • Residual encoders, Differential Evolution, Focal Loss & LightGBM.
+      • Run command <span class="text-[#00FF66]">'cogni-scan'</span> for live telemetry stream.
+
+  [3] <span class="text-white font-bold">GeoShape</span>
+      • Real-time multiplayer geography boundary guessing web app.
+      • Stack: Svelte 5, SvelteKit, WebSockets, SQLite, D3-Geo, Docker.
+
+  [4] <span class="text-white font-bold">AdaptiveNet-RouterLab</span>
+      • Dynamic network routing topology simulator (Dijkstra, Bellman-Ford, A*).
+      • Run command <span class="text-[#00FF66]">'route NodeA NodeD'</span> to calculate shortest path.
+
+  [5] <span class="text-white font-bold">AI Email Spam Detector</span>
+      • Production NLP classification pipeline with 98.74% test accuracy.
+      • Run command <span class="text-[#00FF66]">'spam-check "Free cash click here"'</span> to test.
+
+  [6] <span class="text-white font-bold">Sortoscope</span>
+      • Algorithm visualizer with 15+ sorts, Race Mode, and Web Audio.
+      • Run command <span class="text-[#00FF66]">'sort-race quick bubble'</span> to run in shell.
+
+  [7] <span class="text-white font-bold">ChilliViT</span>
+      • Vision Transformer (ViT) deep learning model for crop disease detection.
+      • Deployed on Hugging Face Spaces with interactive Gradio UI.
+================================================================`);
+          break;
+
+        case "skills":
+          appendLine(`Technical Skills Matrix:
+  Languages    : Python [██████████] 95% | TypeScript [█████████ ] 90%
+                 C/Java [████████  ] 85% | SQL/Solidity [████████  ] 80%
+  AI / ML      : PyTorch, Vision Transformers, NLP, Scikit-learn, LightGBM
+  Frontend     : React, Svelte 5, Next.js, Tailwind CSS, D3-Geo, Three.js
+  Backend      : Node.js, FastAPI, NestJS, Express, PostgreSQL, Prisma
+  DevOps/Tools : Docker, Git/GitHub, Linux, Kubernetes, Vite, Hugging Face`);
+          break;
+
+        case "spam-check":
+          if (!argStr) {
+            appendLine(`Usage: spam-check "<message to classify>"\nExample: spam-check "Congratulations! You won a $1,000 cash voucher. Click now!"`);
+          } else {
+            const isSpam = /(free|win|winner|cash|urgent|prize|click|credit|offer|congratulations|dollar|\$)/i.test(argStr);
+            const confidence = isSpam ? (94.2 + Math.random() * 4.8).toFixed(2) : (96.5 + Math.random() * 3.1).toFixed(2);
+            appendLine(`----------------------------------------------------------------
+  AI Spam Detection Pipeline (NLP / TF-IDF + Heuristic Engine)
+----------------------------------------------------------------
+  Input Sample : "${argStr}"
+  Vector Norm  : L2 Normalized (2,500 feature tokens evaluated)
+  Prediction   : ${isSpam ? "🚨 SPAM DETECTED" : "✅ LEGITIMATE (HAM)"}
+  Confidence   : ${confidence}%
+  Model Specs  : 98.74% Accuracy Benchmark | 0.95 F1-Score
+----------------------------------------------------------------`);
+          }
+          break;
+
+        case "sort-race":
+          const [a1 = "quick", a2 = "bubble"] = args;
+          appendLine(`🏁 Executing Sortoscope Race: [${a1.toUpperCase()}] vs [${a2.toUpperCase()}] on N=64 elements:
+  ${a1.toUpperCase()} : [████████████████████] 100% | Comparisons: 384 | Swaps: 142 (TIME: 1.2ms)
+  ${a2.toUpperCase()} : [████████░░░░░░░░░░░░]  40% | Comparisons: 2016| Swaps: 980 (TIME: 8.6ms)
+  🏆 Winner: ${a1.toUpperCase()} with O(N log N) average efficiency!`);
+          break;
+
+        case "cogni-scan":
+          appendLine(`🧠 Cogni-Fusion Multimodal Telemetry Link Active...
+  [EEG Delta  0.5-4Hz ] : ~~~~^~~~~~~^~~~~ (Normal Baseline)
+  [EEG Theta  4-8Hz   ] : ^^^^~~~~~~~~~~~~ (Engagement Confirmed)
+  [EEG Alpha  8-12Hz  ] : ~~~~~~^^^^^^^^~~ (High Focus)
+  [EEG Beta   13-30Hz ] : ^^^^^^^^^^^^^^^^ (Active Problem Solving)
+  [Blink Rate / Gaze  ] : 14 blinks/min | Fixation Duration: 340ms
+  >> COGNITIVE LOAD INDEX: 0.78 (Optimum Flow State Achieved)`);
+          break;
+
+        case "route":
+          const src = args[0] || "NodeA";
+          const dst = args[1] || "NodeD";
+          appendLine(`🌐 AdaptiveNet-RouterLab: Solving path from [${src}] to [${dst}]...
+  Algorithm Applied : Bidirectional Dijkstra + Link Latency Weighting
+  Selected Hop Path : [${src}] -> (12ms) -> [NodeB] -> (8ms) -> [${dst}]
+  Total Latency     : 20ms (0 packet loss, 100% throughput)`);
+          break;
+
+        case "solo-quest":
+          questState = { active: true, hp: 100, bossHp: 80, rank: "E-Rank Hunter" };
+          appendLine(`⚔️ Welcome to Solo Quest Dungeon Mode! ⚔️
+  You have entered an instanced gate.
+  Target: [Cerberus of Sri City Gate] (HP: 80)
+  Hunter Stats: HP: 100/100 | Rank: E-Rank
+  
+  Available Actions: 'attack', 'heal', 'status', 'run'`);
+          break;
+
+        case "resume":
+        case "cv":
+          appendLine(`📄 Poorna Sri Nandyala - Official Resume:
+  - IIIT Sri City (CSE 2024-2028)
+  - Core: Data Structures, Algorithms, AI/ML, Full-Stack Web
+  - Projects: Solo Quest, Cogni-Fusion, GeoShape, Sortoscope, ChilliViT
+  - GitHub: https://github.com/PoornaSri26`);
+          break;
+
+        case "contact":
+          appendLine(`📬 Connect with Poorna Sri:
+  • College Email : poornasri.n24@iiits.in
+  • Personal Email: poornasri26@gmail.com
+  • GitHub        : https://github.com/PoornaSri26
+  • LinkedIn      : https://linkedin.com/in/poornasri26
+  • Campus        : IIIT Sri City, Andhra Pradesh, India`);
+          break;
+
+        case "clear":
+        case "cls":
+          terminalBody.innerHTML = "";
+          break;
+
+        case "matrix":
+          appendLine(`01010000 01101111 01101111 01110010 01101110 01100001
+Wake up, Visitor...
+The Matrix has you.
+Follow the cyber-pink rabbit.
+01000011 01010011 01000101 00100000 00110010 00110000 00110010 00111000`);
+          break;
+
+        case "sudo":
+          appendLine(`[SECURITY NOTICE] User is not in sudoers file.\nThis incident will be reported to admin@iiits.in.`);
+          break;
+
+        case "exit":
+        case "gui":
+          closeShell();
+          break;
+
+        default:
+          appendLine(`pssh: command not found: '${trimmed}'. Type 'help' for commands.`);
+          break;
+      }
+    }
+
+    function handleRpgAction(action) {
+      if (action === "attack") {
+        const dmg = Math.floor(Math.random() * 25) + 15;
+        questState.bossHp = Math.max(0, questState.bossHp - dmg);
+        appendLine(`🗡️ You strike the Gate Boss with Dagger Flurry for ${dmg} DMG! (Boss HP: ${questState.bossHp})`);
+
+        if (questState.bossHp === 0) {
+          appendLine(`🎉 DUNGEON CLEARED! You have leveled up to [C-Rank Hunter]!
+Type 'solo-quest' to play again or 'help' to exit.`);
+          questState.active = false;
+          return;
+        }
+
+        const bossDmg = Math.floor(Math.random() * 18) + 8;
+        questState.hp = Math.max(0, questState.hp - bossDmg);
+        appendLine(`🔥 Cerberus retaliates with Hellfire for ${bossDmg} DMG! (Your HP: ${questState.hp})`);
+
+        if (questState.hp === 0) {
+          appendLine(`💀 You were defeated. Shadows engulf the gate.`);
+          questState.active = false;
+        }
+      } else if (action === "heal") {
+        questState.hp = Math.min(100, questState.hp + 25);
+        appendLine(`✨ You drank an Elixir! Recovered 25 HP. (Your HP: ${questState.hp})`);
+      } else if (action === "run") {
+        appendLine(`🏃 You safely escaped back to Sri City safe zone.`);
+        questState.active = false;
+      } else if (action === "status") {
+        appendLine(`Stats: HP: ${questState.hp}/100 | Boss HP: ${questState.bossHp}/80 | Rank: ${questState.rank}`);
+      }
+    }
+
+    terminalInput.addEventListener("keydown", (e) => {
+      playClick();
+      if (e.key === "Enter") {
+        executeCommand(terminalInput.value);
+        terminalInput.value = "";
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (cmdHistory.length > 0) {
+          historyPointer = historyPointer === -1 ? cmdHistory.length - 1 : Math.max(0, historyPointer - 1);
+          terminalInput.value = cmdHistory[historyPointer] || "";
+        }
+      } else if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (historyPointer !== -1) {
+          historyPointer++;
+          if (historyPointer < cmdHistory.length) {
+            terminalInput.value = cmdHistory[historyPointer];
+          } else {
+            historyPointer = -1;
+            terminalInput.value = "";
+          }
+        }
+      } else if (e.key === "Tab") {
+        e.preventDefault();
+        const allCmds = ["help", "about", "projects", "skills", "psfetch", "solo-quest", "spam-check", "sort-race", "cogni-scan", "route", "resume", "contact", "clear", "matrix", "sudo", "exit"];
+        const match = allCmds.find(c => c.startsWith(terminalInput.value.trim().toLowerCase()));
+        if (match) terminalInput.value = match;
+      }
+    });
+  </script>
+</body>
+</html>
+
