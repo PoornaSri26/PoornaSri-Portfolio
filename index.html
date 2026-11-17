@@ -179,6 +179,18 @@ footer{background:rgba(12,8,18,0.88);border-top:1px solid var(--border);padding:
 .terminal{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;font-family:var(--mono);font-size:12px;line-height:1.9;margin-top:1.5rem;position:relative}
 .terminal::before{content:'● ● ●';position:absolute;top:10px;right:14px;font-size:8px;color:var(--text3);letter-spacing:4px}
 .t-cmd{color:var(--green)}.t-out{color:var(--text2)}.t-acc{color:var(--accent2)}.t-teal{color:var(--teal)}.t-amber{color:var(--amber)}.t-comment{color:var(--text3)}
+#term-app{cursor:text;transition:border-color .2s}
+#term-app:focus-within{border-color:var(--accent)}
+.term-out{min-height:200px;max-height:380px;overflow-y:auto;margin-top:.5rem;padding-right:.5rem}
+.term-line{white-space:pre-wrap;word-break:break-word}
+.term-line.err{color:#e08a8a}
+.term-row{display:flex;align-items:baseline;gap:.5rem;margin-top:.75rem}
+.term-prompt{color:var(--accent2);flex:0 0 auto;user-select:none}
+.term-input{flex:1;min-width:0;background:transparent;border:none;color:var(--text);font-family:var(--mono);font-size:12px;caret-color:var(--accent2)}
+.term-input::placeholder{color:var(--text3)}
+.term-input:focus{outline:none}
+.term-out a{color:var(--accent2);text-decoration:underline;text-underline-offset:3px}
+.term-hint{font-family:var(--mono);font-size:10px;color:var(--text3);margin-top:.75rem;text-align:center;letter-spacing:.05em}
 .glow-div{height:1px;background:linear-gradient(90deg,transparent 0%,var(--accent) 30%,var(--accent2) 70%,transparent 100%);opacity:.3;margin:0}
 @media(max-width:768px){
   .nav-toggle{display:flex}
@@ -223,6 +235,7 @@ body:not(.loaded) .hero-tag,body:not(.loaded) .hero-name,body:not(.loaded) .hero
       <li><a href="#projects">projects</a></li>
       <li><a href="#skills">skills</a></li>
       <li><a href="#experience">experience</a></li>
+      <li><a href="#terminal">terminal</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
     <a href="mailto:poornasri.n24@gmail.com" class="nav-cta magnetic">get in touch</a>
@@ -466,6 +479,24 @@ body:not(.loaded) .hero-tag,body:not(.loaded) .hero-name,body:not(.loaded) .hero
         </article>
       </div>
     </div>
+    </div>
+  </div>
+</section>
+
+<section id="terminal" class="reveal-section" data-chapter="Act VII · Terminal" aria-labelledby="terminal-title">
+  <div class="section">
+    <div class="section-lock" aria-hidden="true"><span>Scroll to unlock</span></div>
+    <div class="section-inner">
+    <div class="section-header"><span class="section-num">06</span><h2 class="section-title" id="terminal-title">Terminal</h2></div>
+    <p style="font-size:13px;color:var(--text3);margin:-1rem 0 1.25rem;font-family:var(--mono)">type 'help' — it's a real shell (for a portfolio)</p>
+    <div class="terminal" id="term-app" role="application" aria-label="Interactive terminal — type help for commands">
+      <div class="term-out" id="term-out" aria-live="polite"></div>
+      <form class="term-row" id="term-form" autocomplete="off">
+        <span class="term-prompt" aria-hidden="true">poorna@iiit:~$</span>
+        <input class="term-input" id="term-input" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="Terminal command input"/>
+      </form>
+    </div>
+    <p class="term-hint">commands: help · about · projects · skills · experience · contact · whoami · clear</p>
     </div>
   </div>
 </section>
